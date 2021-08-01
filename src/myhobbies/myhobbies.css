@@ -1,0 +1,55 @@
+.myhobbies-full-div{
+    width: 100%;
+    margin-top: 100px;
+}
+.myhobbies-headline-outer-div{
+    position: relative;
+}
+
+.myhobbies-headline-inner-div{
+    background-color: #F0F2F5;
+    background-color: #303136;
+    display: inline-block;
+    padding: 1rem 2rem;
+}
+
+.myhobbies-underline{
+    height: 4px;
+    width: 100%;
+    background-color: rgb(136, 136, 136);
+    background-color: #ffe74d;
+    max-width: 900px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    z-index: -1;
+    border-radius: 100%;
+}
+
+.myhobbies-headline-inner-div span:nth-child(1){
+    font-family: 'Dancing Script';
+    font-size: 2.5rem;
+    text-shadow: 3px 3px 5px black;
+    font-weight: 600;
+    color: #6BD8DB;
+}
+
+.myhobbies-headline-inner-div span:nth-child(2){
+    font-family: 'Dancing Script';
+    font-size: 2.5rem;
+    color: #624232;
+    color: #FFDD07;
+    font-weight: 600;
+    text-shadow: 3px 3px 5px black;
+}
+
+.myhobbie-hobbiecard-outer-div{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 20px;
+}

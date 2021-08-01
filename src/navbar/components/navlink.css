@@ -1,0 +1,35 @@
+.portfolio-navbar-navlink-div{
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+    cursor: pointer;
+    color: #fafafa;
+    transition: all 500ms ease-in-out;
+}
+
+.portfolio-navbar-navlink{
+    padding-top: 20px;
+    font-family: 'Roboto';
+    text-shadow: 3px 3px 3px black;
+}
+
+.portfolio-navbar-navlink-div:hover{
+    color: #61faff;
+    color: #FFD369;
+    /* color: #39C8CA; */
+}
+
+.navlink-underline{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #6BD8DB;
+    background-color: #FFD369;
+    height: 3px;
+    width: 0;
+    border-radius: 0 1px 1px 0;
+    transition: all 500ms ease-in-out;
+    opacity: 0;
+}
