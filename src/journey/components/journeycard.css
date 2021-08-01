@@ -1,0 +1,188 @@
+.journeycard-full-div{
+    width: 700px;
+    height: 820px;
+    border-radius: 10px;
+    /* display: flex;
+    justify-content: flex-start;
+    display: inline-block; */
+    position: relative;
+    transition: all 700ms ease-in-out;
+    margin: 0 auto;
+}
+
+@media(max-width : 750px){
+    .journeycard-full-div{
+        width: 98%;
+    }
+}
+
+.journeycard-year-div{
+    height: 240px;
+}
+
+.journeycard-year-circle{
+    height: 10rem;
+    width: 10rem;
+    border-radius: 100%;
+    border: 2px solid #FFDD07;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Dancing Script';
+    font-weight: 600;
+    font-size: 2rem;
+    text-shadow: 2px 2px 5px black;
+    box-shadow: inset 3px 3px 5px black;
+    color: #FFDD07;
+}
+
+.arrow-div{
+    color: #FFDD07;
+    font-size: 4rem;
+}
+
+.bottom-arrow-div{
+    color: #FFDD07;
+    font-size: 4rem;
+    margin-top: 10px;
+}
+
+.journeycard-timestamp-div{
+    width: 200px;
+    height: 40px;
+    color: yellow;
+    background-color: black;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px 5px 0 0;
+    border-bottom: 2px solid white;
+    /* transform: translateX(-400px); */
+    transition: all 700ms ease-in-out;
+    /* position: absolute; */
+    /* top: 240px; */
+    opacity: 0;
+}
+
+.journeycard-timestamp-div p :nth-child(1){
+    text-shadow: 2px 2px 5px white;
+    font-family: 'Nunito';
+}
+
+.journeycard-details-div{
+    width: 100%;
+    height: 444px;
+    border-radius: 0 5px 5px 5px;
+    background-color: white;
+    border: 2px solid black;
+    /* box-shadow: 7px 7px 10px grey; */
+    /* box-shadow: 7px 7px aqua; */
+    /* filter: drop-shadow(0 0 15px grey); */
+    /* padding: 10px; */
+    position: relative;
+    transform: translateX(-400px);
+    transition: all 700ms ease-in-out;
+    opacity: 0;
+}
+
+
+.journeycard-details-background-div{
+    width: 100%;
+    height: 100%;
+    content: "";
+    position: absolute;
+    right: -10px;
+    bottom: -10px;
+    background-color: green;
+    z-index: -1;
+    box-shadow: 10px 10px 7px black;
+    border-radius: 5px;
+    border: 2px solid black;
+}
+
+.journeycard-details-inner-div{
+    width: 100%;
+    height: 100%;
+    border-radius: 0 5px 5px 5px;
+    /* background-color: #13161b; */
+    background-color: yellow;
+    background-color: #393E46;
+    background-color: rgb(44, 187, 44);
+    background-color: #E2E0E0;
+}
+
+.journeycard-school-div{
+    border-radius: 0 5px 0 0;
+    height: 60%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid #F0F2F5;
+    position: relative;
+}
+
+.journeycard-school-name{
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    font-size: 2.1rem;
+    text-shadow: 2px 2px 3px black;
+    color: #FFDD07;
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+}
+
+.journeycard-academics-div{
+    height: calc(40% - 4px);
+    padding: 7px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #FFDD07;
+    color: #532E1C;
+    text-shadow: 2px 2px 3px grey;
+}
+
+.journeycard-stream-div{
+    width: 57%;
+    height: 100%;
+    border-right: 1px solid white;
+    text-align: left;
+    margin-left: 5px;
+}
+
+.journeycard-stream-div p:nth-child(1){
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.journeycard-stream-div span:nth-child(2){
+    color: white;
+    color: #222831;
+    font-weight: 500;
+}
+
+.journeycard-marks-div{
+    width: 44%;
+    height: 100%;
+    text-align: left;
+    padding-left: 5px;
+}
+
+.journeycard-marks-div p:nth-child(1){
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.journeycard-marks-div span:nth-child(2){
+    color: white;
+    color: #222831;
+    font-weight: 500;
+}
+

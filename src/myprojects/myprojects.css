@@ -1,0 +1,170 @@
+.myprojects-full-div{
+    width: 100%;
+    background-color: #FFDD07;
+    border-radius: 10px;
+    padding-bottom: 150px;
+    filter: drop-shadow(0 10px 5px black);
+}
+
+.myprojects-curved-upper-div{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.myprojects-outer-div{
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.534) ,rgba(0, 0, 0, 0.534)) ,  url('../images/codeImage.png') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    position: relative;
+    padding-bottom: 200px;
+    padding-top: 350px;
+    clip-path: url(#myProjectsCurve);
+    /* transform: translateY(-150px); */
+    /* filter: drop-shadow(0 0 5px green); */
+}
+
+.myprojects-outer-div-background-image{
+    position: absolute;
+    z-index: -10;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background : linear-gradient(rgba(0, 0, 0, 0.534) ,rgba(0, 0, 0, 0.534));
+}
+
+.myprojects-curved-svg1{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.myprojects-curved-svg2{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.myprojects-inner-div{
+    width: 100%;
+    height: 600px;
+    max-width: 1200px;
+    border-radius: 10px;
+    /* border: 4px solid #222831; */
+    position: relative;
+    transition: all 500ms ease-in-out;
+    margin: 0 auto;
+    /* filter: drop-shadow(0 0 5px green); */
+    /* transition: all 500ms ease-in-out; */
+}
+@media(max-width : 600px){
+    .myprojects-inner-div{
+        height: 300px;
+    }
+}
+
+.myprojects-carousel-left-button{
+    position: absolute;
+    /* height: 100%; */
+    /* width: 50px; */
+    /* background: linear-gradient(rgba(255, 255, 255, 0.404) , rgba(255, 255, 255, 0.404)) rgba(0, 128, 0, 0.363); */
+    /* border-radius: 10px 0 0 10px; */
+    border-radius: 10px;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: green;
+    cursor: pointer;
+    transition: all 500ms ease-in-out;
+    opacity: 0.2;
+    z-index: 2;
+    display: inline-block;
+}
+
+.myprojects-carousel-left-button:hover{
+    opacity: 1;
+}
+
+.myprojects-carousel-left-button:hover .myprojects-carousel-left-button-svg{
+    filter: drop-shadow(0 0 2px green);
+    transform: scale(1.3);
+}
+
+.myprojects-carousel-left-button-svg{
+    font-size: 2rem;
+    /* filter: drop-shadow(0 0 2px rgba(0, 128, 0, 0.575)); */
+    transition: all 500ms ease-in-out;
+}
+
+
+
+.myprojects-carousel-right-button{
+    position: absolute;
+    /* width: 50px; */
+    /* background: linear-gradient(rgba(255, 255, 255, 0.404) , rgba(255, 255, 255, 0.404)) rgba(0, 128, 0, 0.363); */
+    /* border-radius: 10px 0 0 10px; */
+    border-radius: 10px;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: green;
+    cursor: pointer;
+    transition: all 500ms ease-in-out;
+    opacity: 0.2;
+    z-index: 2;
+    display: inline-block;
+}
+
+.myprojects-carousel-right-button:hover{
+    opacity: 1;
+}
+
+.myprojects-carousel-right-button:hover .myprojects-carousel-right-button-svg{
+    filter: drop-shadow(0 0 2px green);
+    transform: rotate(0) scale(1.3);
+}
+
+.myprojects-carousel-right-button-svg{
+    font-size: 2rem;
+    /* filter: drop-shadow(0 0 4px rgba(0, 128, 0, 0.575)); */
+    transition: all 500ms ease-in-out;
+    /* transform: rotate(180deg); */
+}
+
+.myprojects-carousel-scroll-full-div{
+    width: 100%;
+    /* min-width: 100%; */
+    height: 100%;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    /* overflow-y: visible; */
+}
+
+.myprojects-carousel-scroll-full-div {
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+}
+.myprojects-carousel-scroll-full-div::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}
+
+.myprojects-carousel-scroll-inner-div{
+    width: 400%;
+    height: 100%;
+    /* animation: 2s scroll infinite; */
+    /* position: relative;
+    left: 0;
+    margin: 0; */
+}
