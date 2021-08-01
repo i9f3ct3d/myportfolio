@@ -26,7 +26,7 @@ const Aboutme=()=>{
                 </div>
             </div>
             <div className="aboutme-image-div">
-                <img className="aboutme-image" src={aboutmeImg}/>
+                <img className="aboutme-image" alt="My Img" src={aboutmeImg}/>
             </div>
         <svg width="0" height="0">
             <defs>
@@ -47,4 +47,4 @@ const Aboutme=()=>{
     );
 }
 
-export default Aboutme;
+export default React.memo(Aboutme);

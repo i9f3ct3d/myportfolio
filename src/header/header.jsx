@@ -1,15 +1,13 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './header.css'
 import MyPic from '../images/myPic.svg'
-
-
 
 const Header = () =>{
 
     function SvgComponent(props) {
         return (
-          <svg className={props.className} style={{filter : onMouseHoverHandler && "drop-shadow(0 0 5px grey)" , width : "2rem" , transition: "all 500ms ease-in-out"}} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" {...props}>
-            <g fill= {onMouseHoverHandler ? "white" : "#ffdd09"}>
+          <svg className={props.className} style={{ width : "2rem" , transition: "all 500ms ease-in-out"}} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" {...props}>
+            <g fill= {"#ffdd09"}>
               <path d="M443.733 8.533h-23.04c8.533 0 14.507 7.68 14.507 17.067v460.8c0 9.387-6.827 17.067-14.507 17.067h23.04c9.387 0 17.067-7.68 17.067-17.067V25.6c0-9.387-7.68-17.067-17.067-17.067M85.333 25.6v460.8c0 9.387 6.827 17.067 14.507 17.067h294.4c8.533 0 14.507-7.68 14.507-17.067V25.6c0-9.387-6.827-17.067-14.507-17.067H99.84c-7.68 0-14.507 7.68-14.507 17.067" />
             </g>
             <path
@@ -32,7 +30,6 @@ const Header = () =>{
         )
       }
 
-    const [onMouseHoverHandler , setOnMouseOverHandler] = useState(false);
 
     return(
       <div  className="portfolio-header-full-div">
@@ -49,11 +46,11 @@ const Header = () =>{
                   <p><i style={{color:"#FFDD07" , fontSize:"0.5rem" , marginRight :"5px"}} className="far fa-circle"></i>FLUTTER DEVELOPER</p>
                   <p><i style={{color:"#FFDD07" , fontSize:"0.5rem" , marginRight :"5px"}} className="far fa-circle"></i>CYBER SECURITY ENTHUSIAST</p>
                 </div>
-                <div onMouseOver={()=>{setOnMouseOverHandler(true)}} onMouseOut={()=>{setOnMouseOverHandler(false)}} style={{borderColor : onMouseHoverHandler && "white" , backgroundColor : onMouseHoverHandler && "#FFDD07" , transform : onMouseHoverHandler && "scale(1.03)"}} className="resume-tag-div">
+                <div className="resume-tag-div">
                     <SvgComponent
                       className="resume-svg"
                     />
-                    <a style={{color : onMouseHoverHandler && "white" , textShadow : onMouseHoverHandler && "2px 2px 3px grey"}} className="resume-tag" href="facebook.com">Resume</a>
+                    <a  className="resume-tag" href="facebook.com">Resume</a>
                 </div>
             </div>
         </div>
@@ -61,4 +58,4 @@ const Header = () =>{
     );
 }
 
-export default Header;
+export default React.memo(Header);

@@ -1,15 +1,19 @@
-import React, { Fragment, useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { GiFrayedArrow } from 'react-icons/gi'
 import './journeycard.css'
+
+import KuehsPic from '../../images/kuehsPic.svg'
+import RKCPPic from '../../images/RKCP.svg'
+import Crla from '../../images/crla.svg'
+import NitD from '../../images/NitDPic.svg'
 
 
 const JourneyCard=(props)=>{
 
+    const [isIntersecting, setIntersecting] = useState(false)
+    const [windowWidth , setWindowWidth] = useState(window.innerWidth);
 
     const ref = useRef();
-
-    const [isIntersecting, setIntersecting] = useState(false)
-  
     const observer = new IntersectionObserver(
       ([entry]) => setIntersecting(entry.isIntersecting)
     )
@@ -18,6 +22,52 @@ const JourneyCard=(props)=>{
       observer.observe(ref.current)
       return () => { observer.disconnect() }
     }, [])
+
+
+    const handleWindowResize=()=>{
+        setWindowWidth(window.innerWidth)
+    }
+
+    useEffect(()=>{
+        
+        window.addEventListener('resize' , handleWindowResize);
+
+        return()=>{
+            window.removeEventListener('resize' , handleWindowResize);
+        }
+
+    },[])
+
+
+
+    const getTransform=(direction)=>{
+        if(direction === "left"){
+            if(windowWidth <= 500){
+                return "-50px";
+            }
+            return "-400px";
+        }else{
+            if(windowWidth <= 500){
+                return "50px";
+            }
+            return "400px";
+        }
+    }
+
+    const getBackImg=(backImgName)=>{
+        if(backImgName === "rkcp"){
+            return RKCPPic;
+        }
+        if(backImgName === "kuehs"){
+            return KuehsPic;
+        }
+        if(backImgName === "crla"){
+            return Crla;
+        }
+        if(backImgName === "nitd"){
+            return NitD;
+        }
+    }
 
 
     return(
@@ -30,12 +80,12 @@ const JourneyCard=(props)=>{
                     <GiFrayedArrow/>
                 </div>
             </div>
-            <div style={{opacity : isIntersecting && "1" , transform : isIntersecting ? "none" : (props && props.dir && `translateX(${props.dir})`)}} className="journeycard-timestamp-div">
+            <div style={{opacity : isIntersecting && "1" , transform : isIntersecting ? "none" : (props && props.dir && `translateX(${getTransform(props.dir)})`)}} className="journeycard-timestamp-div">
                 <p>{props && props.time && props.time}</p>
             </div>
-            <div ref={ref} style={{opacity : isIntersecting && "1" , transform : isIntersecting ? "none" : (props && props.dir && `translateX(${props.dir})`)}} className="journeycard-details-div">
+            <div ref={ref} style={{opacity : isIntersecting && "1" , transform : isIntersecting ? "none" : (props && props.dir && `translateX(${getTransform(props.dir)})`)}} className="journeycard-details-div">
                 <div className="journeycard-details-inner-div">
-                    <div style={{backgroundImage:  `url(${props && props.background && props.background})`}} className="journeycard-school-div">
+                    <div style={{backgroundImage:  `url(${props && props.background && getBackImg(props.background)})`}} className="journeycard-school-div">
                     <p className="journeycard-school-name">{props && props.schoolName && props.schoolName}</p>
                     </div>
                     <div className="journeycard-academics-div">
@@ -61,4 +111,4 @@ const JourneyCard=(props)=>{
 
 }
 
-export default JourneyCard;
+export default React.memo(JourneyCard);

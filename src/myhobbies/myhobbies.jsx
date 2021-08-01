@@ -35,4 +35,4 @@ const MyHobbies=()=>{
     );
 }
 
-export default MyHobbies;
+export default React.memo(MyHobbies);

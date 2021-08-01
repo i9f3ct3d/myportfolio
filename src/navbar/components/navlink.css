@@ -16,9 +16,7 @@
 }
 
 .portfolio-navbar-navlink-div:hover{
-    color: #61faff;
     color: #FFD369;
-    /* color: #39C8CA; */
 }
 
 .navlink-underline{
@@ -32,4 +30,9 @@
     border-radius: 0 1px 1px 0;
     transition: all 500ms ease-in-out;
     opacity: 0;
+}
+
+.portfolio-navbar-navlink-div:hover .navlink-underline{
+    width: 100%;
+    opacity: 1;
 }

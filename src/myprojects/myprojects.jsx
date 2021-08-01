@@ -1,12 +1,8 @@
-import react, { useEffect, useState } from 'react';
+import React,{ useEffect, useState } from 'react';
 
 import './myprojects.css';
 import {BiLeftArrow , BiRightArrow} from 'react-icons/bi'
 import ProjectCard from './components/projectCard';
-import ChatherePic from '../images/Chathere.jpg'
-import PostifyPic from '../images/postify.png'
-import JustmailitPic from '../images/justmailit.png'
-import Myportfolio from '../images/portfolioPic.png'
 
 const maxPostCardNo = 4;
 
@@ -62,9 +58,6 @@ const MyProjects=()=>{
         }
     }
 
-    // window.setTimeout(() => {
-    //     carouselRightArrowClickHandler();
-    // }, 10000);
 
 
     return(
@@ -96,7 +89,7 @@ const MyProjects=()=>{
                                 no={1}
                                 header="Posti-fy"
                                 details="A social media site made using MERN"
-                                backImg={PostifyPic}
+                                backImg="postify"
                                 link="https://github.com/i9f3ct3d/POSTIFY-frontend"
                             />
                             <ProjectCard
@@ -104,15 +97,15 @@ const MyProjects=()=>{
                                 no={2}
                                 header="Chathere"
                                 details="A Chatting app made using Flutter"
-                                backImg={ChatherePic}
+                                backImg="chathere"
                                 link="https://github.com/i9f3ct3d/Chathere-apk"
                             />
                             <ProjectCard
                                 key={3}
                                 no={3}
-                                header="JustMailIt"
+                                header="justmailit"
                                 details="A Mail scheduler made using MERN"
-                                backImg={JustmailitPic}
+                                backImg="justmailit"
                                 link="https://github.com/i9f3ct3d/just-mail-it_frontend"
                             />
                             <ProjectCard
@@ -120,7 +113,7 @@ const MyProjects=()=>{
                                 no={4}
                                 header="My Portfolio"
                                 details="A portfolio site made using MERN"
-                                backImg={Myportfolio}
+                                backImg="myportfolio"
                                 link="https://github.com/i9f3ct3d/myportfolio"
                             />
                         </div>
@@ -150,4 +143,4 @@ const MyProjects=()=>{
 
 }
 
-export default MyProjects;
+export default React.memo(MyProjects);

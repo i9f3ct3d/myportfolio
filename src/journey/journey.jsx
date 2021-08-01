@@ -1,29 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import JourneyCard from './components/journeycard';
-import KuehsPic from '../images/kuehsPic.svg'
-import RKCPPic from '../images/RKCP.svg'
-import Crla from '../images/crla.svg'
-import NitD from '../images/NitDPic.svg'
 
 import './journey.css'
 
 const Journey=()=>{
-
-    const [windowWidth , setWindowWidth] = useState()
-
-    const windowWidthChangeHandler=()=>{
-        setWindowWidth(window.innerWidth);
-    }
-
-    useEffect(()=>{
-
-        window.addEventListener('resize',windowWidthChangeHandler);
-        
-        return()=>{
-            window.removeEventListener('resize',windowWidthChangeHandler);
-        }
-
-    },[])
 
     return(
         <div id="portfolio-my-journey" className="journey-full-div">
@@ -40,28 +20,28 @@ const Journey=()=>{
                     schoolName="R.K.C.P."
                     stream="Nursery - IV"
                     marks="I guess I used to be first in every year"
-                    background={RKCPPic}
+                    background="rkcp"
                     backgroundColor="#D8BE97"
                     year = "2005"
-                    dir={windowWidth ?  (windowWidth <= 500 ? "-50px" : "-400px") : window.innerWidth <=500 ? "-50px" : "-400px"}
+                    dir = "left"
                 />
                 <JourneyCard
                     time="2010 - 2016"
                     schoolName="K.U.E.H.S"
                     stream="Science | Arts | Commerce"
                     marks="ME : 89.14%"
-                    background={KuehsPic}
+                    background="kuehs"
                     year = "2010"
-                    dir={windowWidth ?  (windowWidth <= 500 ? "50px" : "400px") : window.innerWidth <=500 ? "50px" : "400px"}
+                    dir = "right"    
                 />
                 <JourneyCard
                     time="2016 - 2018"
                     schoolName="C.R.L.A."
                     stream="Science"
                     marks="HS : 83.8%"
-                    background={Crla}
+                    background="crla"
                     year = "2016"
-                    dir={windowWidth ?  (windowWidth <= 500 ? "-50px" : "-400px") : window.innerWidth <=500 ? "-50px" : "-400px"}
+                    dir = "left"
                     backgroundColor="#B48462"
                 />
                 <JourneyCard
@@ -69,9 +49,9 @@ const Journey=()=>{
                     schoolName="N.I.T. Durgapur"
                     stream="Computer Science & Engineering"
                     marks="CGPA : 8.41"
-                    background={NitD}
+                    background="nitd"
                     year = "2019"
-                    dir={windowWidth ?  (windowWidth <= 500 ? "50px" : "400px") : window.innerWidth <=500 ? "50px" : "400px"}
+                    dir = "right" 
                     isLast={true}
                 />
                 <br/>
@@ -81,4 +61,4 @@ const Journey=()=>{
 
 }
 
-export default Journey;
+export default React.memo(Journey);
