@@ -8,6 +8,8 @@ const Navbar = () =>{
 
     const [scrollPos , setScrollPos] = useState(0);
     const [isScrollingDown , setIsScrollingDown] = useState(false);
+    const [navbarButtonClicked , setNavbarButtonClicked] = useState(false);
+    const [windowWidth , setWindowWidth] = useState(window.innerWidth);
 
     const handleScroll=useCallback((e)=>{
 
@@ -36,12 +38,19 @@ const Navbar = () =>{
         setNavbarButtonClicked(!navbarButtonClicked);
     }
 
-    const [navbarButtonClicked , setNavbarButtonClicked] = useState(false);
-    const [windowWidth , setWindowWidth] = useState(window.innerWidth);
+    const handleWindowWidthChange=()=>{
+        setWindowWidth(window.innerWidth);
+    }
 
     useEffect(()=>{
-        setWindowWidth(window.innerWidth)
-    },[window.innerWidth])
+
+        window.addEventListener('resize',handleWindowWidthChange);
+        
+        return()=>{
+          window.addEventListener('resize',handleWindowWidthChange);
+        }
+
+    },[])
 
     return(
         <div style={{top : !navbarButtonClicked && windowWidth < 800 && scrollPos > 400 && isScrollingDown && "-300px"}} className="portfolio-navbar">
@@ -52,7 +61,7 @@ const Navbar = () =>{
         <div style={{right : navbarButtonClicked && "0"}} className="mobile-navbar-right-div">
           <div className="mobile-navbar-inner-div">
                     <div className="mobile-navbar-image-div">
-                        <img src={MyPic} className="mobile-navbar-image"/>
+                        <img src={MyPic} alt="my img" className="mobile-navbar-image"/>
                     </div>
                     <div className="mobile-navbar-navlink-div">
                         <p 
@@ -111,7 +120,7 @@ const Navbar = () =>{
           <div className="portfolio-navbar-inner-div">
 
             <div className="portfolio-navbar-logo-div">
-              <img src={Logo} className="navbar-logo"/>
+              <img src={Logo} alt="logo" className="navbar-logo"/>
             </div>
               <div className="portfolio-navbar-navlinks-div">
                         <Navlink
@@ -154,4 +163,4 @@ const Navbar = () =>{
     );
 }
 
-export default Navbar;
+export default React.memo(Navbar);

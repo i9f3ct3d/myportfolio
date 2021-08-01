@@ -1,5 +1,4 @@
 import React from 'react'
-import { CgSpinnerTwoAlt } from 'react-icons/cg'
 import './hobbiecard.css'
 
 
@@ -20,4 +19,4 @@ const HobbieCard=(props)=>{
     );
 }
 
-export default HobbieCard;
+export default React.memo(HobbieCard);

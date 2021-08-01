@@ -1,4 +1,4 @@
-import react from 'react';
+import React from 'react';
 import InputComponent from './components/inputComponent';
 import './contactme.css';
 import {RiMailSendLine} from 'react-icons/ri'
@@ -51,4 +51,4 @@ const ContactMe=()=>{
     );
 }
 
-export default ContactMe;
+export default React.memo(ContactMe);
