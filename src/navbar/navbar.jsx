@@ -116,7 +116,7 @@ const Navbar = () =>{
 
 
         </div>
-        <div style={{backgroundColor : scrollPos >= 177 && "transparent" , filter : scrollPos >= 200 && "drop-shadow(0px 10px 2px rgba(0, 0, 0, 0.5))"}} className="portfolio-navbar-outer-div">
+        <div style={{backgroundColor : scrollPos >= 177 && "transparent" , filter : scrollPos >= 50 && "drop-shadow(0px 10px 5px black)"}} className="portfolio-navbar-outer-div">
           <div className="portfolio-navbar-inner-div">
 
             <div className="portfolio-navbar-logo-div">
@@ -148,11 +148,41 @@ const Navbar = () =>{
         <defs>
           <clipPath id="myCurve" clipPathUnits="objectBoundingBox">
             <path
-                d="M 0,.9
+                d="M 0,.8
 									L 0,0
 									L 1,0
 									L 1,0.5
-									C .7 .2,.5 .8, .1 .9, 0 .9
+									C .6 .05,.4 1, 0 .8
+									Z"
+            />
+          </clipPath>
+        </defs>
+      </svg>
+
+      <svg width="0" height="0">
+        <defs>
+          <clipPath id="myMobileCurve" clipPathUnits="objectBoundingBox">
+            <path
+                d="M 0,.7
+									L 0,0
+									L 1,0
+									L 1,0.4
+									C .5 .05,.5 1, 0 .7
+									Z"
+            />
+          </clipPath>
+        </defs>
+      </svg>
+
+      <svg width="0" height="0">
+        <defs>
+          <clipPath id="myMobileCurve2" clipPathUnits="objectBoundingBox">
+            <path
+                d="M 0,.8
+									L 0,0
+									L 1,0
+									L 1,0.4
+									C .5 .1,.5 1, 0 .8
 									Z"
             />
           </clipPath>

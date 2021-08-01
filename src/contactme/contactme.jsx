@@ -4,6 +4,7 @@ import './contactme.css';
 import {RiMailSendLine} from 'react-icons/ri'
 
 const ContactMe=()=>{
+
     return(
         <div id="portfolio-contact-me" className="contactme-full-div">
             <div className="contactme-inner-div">
@@ -35,6 +36,7 @@ const ContactMe=()=>{
                 />
                 <div className="contactme-send-button-div">
                     <button className="contactme-send-button"><RiMailSendLine/>{" Contact"}</button>
+                    <div className="contact-icon-div"><RiMailSendLine/></div>
                 </div>
                 <div className="contactme-contact-links-div">
                     <div className="contactme-contact-links-div1">

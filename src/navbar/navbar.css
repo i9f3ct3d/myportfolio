@@ -1,7 +1,6 @@
 .portfolio-navbar{
-    /* display: none; */
     width: 100%;
-    height: 300px;
+    height: 350px;
     z-index: 10;
     position: fixed;
     top: 0;
@@ -15,7 +14,6 @@
 }
 
 .navbar-logo{
-    /* margin-top: 50px; */
     width: 20rem;
     height: 20rem;
 }
@@ -32,9 +30,6 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    background-color: rgb(20, 20, 20);
-    background-color: #17141A;
-    background-color: #030e12;
     background-color: #222831;
     clip-path: url(#myCurve);
     position: relative;
@@ -72,12 +67,17 @@
 @media(max-width : 800px){
 
     .portfolio-navbar{
-        height: 200px;
+        height: 300px;
+    }
+
+    .portfolio-navbar-inner-div{
+        clip-path: url(#myMobileCurve);
     }
 
     .navbar-logo{
-        width: 11rem;
+        width: 14rem;
         height: 12rem;
+        transform: translateY(40px);
     }
 
     .portfolio-navbar-navlinks-div{
@@ -225,6 +225,21 @@
         z-index: 199;
     }
 
+}
+
+@media(max-width : 500px){
+    .portfolio-navbar{
+        height: 200px;
+    }
+
+    .portfolio-navbar-inner-div{
+        clip-path: url(#myMobileCurve2);
+    }
+
+    .navbar-logo{
+        width: 9rem;
+        transform: none;
+    }
 }
 
 
