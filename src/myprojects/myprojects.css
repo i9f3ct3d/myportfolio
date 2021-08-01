@@ -23,8 +23,6 @@
     padding-bottom: 200px;
     padding-top: 350px;
     clip-path: url(#myProjectsCurve);
-    /* transform: translateY(-150px); */
-    /* filter: drop-shadow(0 0 5px green); */
 }
 
 .myprojects-outer-div-background-image{
@@ -54,12 +52,9 @@
     height: 600px;
     max-width: 1200px;
     border-radius: 10px;
-    /* border: 4px solid #222831; */
     position: relative;
     transition: all 500ms ease-in-out;
     margin: 0 auto;
-    /* filter: drop-shadow(0 0 5px green); */
-    /* transition: all 500ms ease-in-out; */
 }
 @media(max-width : 600px){
     .myprojects-inner-div{
@@ -69,10 +64,6 @@
 
 .myprojects-carousel-left-button{
     position: absolute;
-    /* height: 100%; */
-    /* width: 50px; */
-    /* background: linear-gradient(rgba(255, 255, 255, 0.404) , rgba(255, 255, 255, 0.404)) rgba(0, 128, 0, 0.363); */
-    /* border-radius: 10px 0 0 10px; */
     border-radius: 10px;
     left: 20px;
     top: 50%;
@@ -107,9 +98,6 @@
 
 .myprojects-carousel-right-button{
     position: absolute;
-    /* width: 50px; */
-    /* background: linear-gradient(rgba(255, 255, 255, 0.404) , rgba(255, 255, 255, 0.404)) rgba(0, 128, 0, 0.363); */
-    /* border-radius: 10px 0 0 10px; */
     border-radius: 10px;
     right: 20px;
     top: 50%;
@@ -136,14 +124,11 @@
 
 .myprojects-carousel-right-button-svg{
     font-size: 2rem;
-    /* filter: drop-shadow(0 0 4px rgba(0, 128, 0, 0.575)); */
     transition: all 500ms ease-in-out;
-    /* transform: rotate(180deg); */
 }
 
 .myprojects-carousel-scroll-full-div{
     width: 100%;
-    /* min-width: 100%; */
     height: 100%;
     overflow-y: hidden;
     overflow-x: scroll;
@@ -163,8 +148,4 @@
 .myprojects-carousel-scroll-inner-div{
     width: 400%;
     height: 100%;
-    /* animation: 2s scroll infinite; */
-    /* position: relative;
-    left: 0;
-    margin: 0; */
 }
