@@ -85,11 +85,11 @@ const JourneyCard=(props)=>{
             </div>
             <div ref={ref} style={{opacity : isIntersecting && "1" , transform : isIntersecting ? "none" : (props && props.dir && `translateX(${getTransform(props.dir)})`)}} className="journeycard-details-div">
                 <div className="journeycard-details-inner-div">
-                    <div style={{backgroundImage:  `url(${props && props.background && getBackImg(props.background)})`}} className="journeycard-school-div">
+                    <div style={{backgroundImage:  `url(${props && props.background && getBackImg(props.background)})` , borderColor : props && props.backgroundColor && props.backgroundColor}} className="journeycard-school-div">
                     <p className="journeycard-school-name">{props && props.schoolName && props.schoolName}</p>
                     </div>
                     <div className="journeycard-academics-div">
-                        <div className="journeycard-stream-div">
+                        <div className="journeycard-stream-div" style={{borderColor : props && props.backgroundColor && props.backgroundColor}}>
                             <p>Stream :</p>
                             <span>{props && props.stream && props.stream}</span>
                         </div>

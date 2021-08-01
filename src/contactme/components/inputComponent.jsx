@@ -5,6 +5,7 @@ const InputComponent=(props)=>{
 
     const [inputValue , setInputValue] = useState("");
 
+
     if(props && props.type && props.type === "textarea"){
         return(
             <div style={{border : inputValue && "2px solid #FFDD07", height: props && props.height && props.height, width : props && props.width && props.width}} className="inputcomponent-full-div">

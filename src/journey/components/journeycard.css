@@ -122,7 +122,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border-bottom: 2px solid #F0F2F5;
+    border-bottom: 2px solid #008000;
     position: relative;
 }
 
@@ -152,7 +152,7 @@
 .journeycard-stream-div{
     width: 57%;
     height: 100%;
-    border-right: 1px solid white;
+    border-right: 2px solid #008000;
     text-align: left;
     margin-left: 5px;
 }

@@ -27,10 +27,10 @@
 .projectcard-inner-div{
     width: 100%;
     height: 100%;
-    /* display: flex; */
     padding: 1rem;
     border-radius: 10px;
     position: relative;
+    overflow: visible;
 }
 
 .projectcard-inner-div-drop{
@@ -48,9 +48,13 @@
 .projectcard-links-div{
     display: inline-block;
     position: absolute;
-    left: 5px;
-    bottom: 5px;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
     z-index: 10;
+    background: #FFDD07;
+    padding: 1rem 2rem;
+    filter: drop-shadow(0 0 20px black);
 }
 
 .projectcard-github-link{
@@ -73,13 +77,15 @@
     left: 50%;
     top: 50%;
     transform: translate(-50% , -50%);
-    width: 1px;
+    width: 0;
     height: 1px;
     border-radius: 100%;
     background: linear-gradient(rgba(250, 250, 99, 0.739) , rgba(250, 250, 99, 0.739) );
-    /* z-index: 1; */
     transition: all 500ms ease-in-out;
     overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 100%;
 }
 
 .projectcard-inner-div:hover .projectcard-hover-drop{
@@ -89,9 +95,13 @@
 }
 
 .projectcard-header-div{
-    text-align: left;
+    text-align: center;
     margin-left: 70px;
     margin-right: 70px;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
 }
 
 .projectcard-header-div p:nth-child(1){
@@ -107,7 +117,8 @@
 .projectcard-details-div{
     margin-left: 70px;
     margin-right: 70px;
-    text-align: left;
+    text-align: center;
+    width: 100%;
 }
 
 .projectcard-details-div p:nth-child(1){
@@ -116,5 +127,4 @@
     color: rgb(36, 20, 20);
     font-weight: 600;
     letter-spacing: 2px;
-    /* text-shadow: 2px 2px 2px black; */
 }

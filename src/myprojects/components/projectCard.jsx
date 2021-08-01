@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import './projectCard.css'
 import ChatherePic from '../../images/Chathere.jpg'
 import PostifyPic from '../../images/postify.png'
@@ -23,21 +23,22 @@ const ProjectCard=(props)=>{
         }
     }
 
+    const ref = useRef();
 
     return(
         <div id={`postCard${props && props.no && props.no}`} className="projectcard-full-div">
                 <img src={props && props.backImg && chooseBackImg(props.backImg)} alt="" className="projectcard-backgroundImage"/>
             <div className="projectcard-inner-div">
-                <div className="projectcard-links-div">
-                    <a style={{cursor : "pointer"}}  className="projectcard-github-link" href={props && props.link && props.link}><i className="fab fa-github"></i>{" Github"}</a>
+                <div style={{cursor : "pointer"}} onClick={()=>{ref.current.click()}} className="projectcard-links-div">
+                    <a ref={ref} style={{cursor : "pointer"}}  className="projectcard-github-link" href={props && props.link && props.link}><i className="fab fa-github"></i>{" Github"}</a>
                 </div>
                 <div className="projectcard-hover-drop">
-                <div className="projectcard-header-div">
-                    <p>{props && props.header && props.header}</p>
-                </div>
-                <div className="projectcard-details-div">
-                    <p>{props && props.details && props.details}</p>
-                </div>
+                    <div className="projectcard-header-div">
+                        <p>{props && props.header && props.header}</p>
+                    </div>
+                    <div className="projectcard-details-div">
+                        <p>{props && props.details && props.details}</p>
+                    </div>
                 </div>
             </div>
         </div>
