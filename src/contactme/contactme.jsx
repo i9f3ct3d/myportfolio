@@ -40,12 +40,12 @@ const ContactMe=()=>{
                 </div>
                 <div className="contactme-contact-links-div">
                     <div className="contactme-contact-links-div1">
-                        <a href="https://github.com/i9f3ct3d" className="contactme-contact-links"><i className="fab fa-github"></i>{" Github"}</a>
-                        <a href="https://www.linkedin.com/in/sushanta-saren/" className="contactme-contact-links"><i className="fab fa-linkedin-in"></i>{" Linkedin"}</a>
+                        <a href="https://github.com/i9f3ct3d" className="contactme-contact-links"><i className="fab fa-github"></i><span className="contactme-contact-links-text">{" Github"}</span></a>
+                        <a href="https://www.linkedin.com/in/sushanta-saren/" className="contactme-contact-links"><i className="fab fa-linkedin-in"></i><span className="contactme-contact-links-text">{" Linkedin"}</span></a>
                     </div>
                     <div className="contactme-contact-links-div2">
-                        <a href="https://www.facebook.com/sushanta.saren.73/" className="contactme-contact-links"><i className="fab fa-facebook-f"></i>{" Facebook"}</a>
-                        <a href="https://twitter.com/SushantaSaren7" className="contactme-contact-links"><i className="fab fa-twitter"></i>{" Twitter"}</a>
+                        <a href="https://www.facebook.com/sushanta.saren.73/" className="contactme-contact-links"><i className="fab fa-facebook-f"></i><span className="contactme-contact-links-text">{" Facebook"}</span></a>
+                        <a href="https://twitter.com/SushantaSaren7" className="contactme-contact-links"><i className="fab fa-twitter"></i><span className="contactme-contact-links-text">{" Twitter"}</span></a>
                     </div>
                 </div>
             </div>

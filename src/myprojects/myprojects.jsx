@@ -1,7 +1,7 @@
 import React,{ useEffect, useState } from 'react';
 
 import './myprojects.css';
-import {BiLeftArrow , BiRightArrow} from 'react-icons/bi'
+import {IoIosArrowBack , IoIosArrowForward} from 'react-icons/io'
 import ProjectCard from './components/projectCard';
 
 const maxPostCardNo = 4;
@@ -74,12 +74,19 @@ const MyProjects=()=>{
                 <div className="myprojects-inner-div">
                     <div onClick={carouselLeftArrowClickHandler} className="myprojects-carousel-left-button">
                         <div className="myprojects-carousel-left-button-svg">
-                        <BiLeftArrow/>
+                        <IoIosArrowBack/>
+                        </div>
+                        <div className="myprojects-carousel-left-button-svg2">
+                        <IoIosArrowBack/>
                         </div>
                     </div>
                     <div onClick={carouselRightArrowClickHandler} className="myprojects-carousel-right-button">
                         <div className="myprojects-carousel-right-button-svg">
-                        <BiRightArrow/>
+                        <IoIosArrowForward/>
+                        </div>
+
+                        <div className="myprojects-carousel-right-button-svg2">
+                        <IoIosArrowForward/>
                         </div>
                     </div>
                     <div className="myprojects-carousel-scroll-full-div">
@@ -112,7 +119,7 @@ const MyProjects=()=>{
                                 key={4}
                                 no={4}
                                 header="My Portfolio"
-                                details="A portfolio site made using MERN"
+                                details="A portfolio site made using React"
                                 backImg="myportfolio"
                                 link="https://github.com/i9f3ct3d/myportfolio"
                             />

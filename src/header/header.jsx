@@ -35,7 +35,7 @@ const Header = () =>{
       <div  className="portfolio-header-full-div">
         <div className="portfolio-header-inner-div">
             <div className="portfolio-header-image-div">
-                <img className="portfolio-header-image" src={MyPic}/>
+                <img className="portfolio-header-image" src={MyPic} alt="My Pic"/>
             </div>
             <div className="portfolio-header-right-div">
                 <p>SUSHANTA SAREN</p>
@@ -46,7 +46,7 @@ const Header = () =>{
                   <p><i style={{color:"#FFDD07" , fontSize:"0.5rem" , marginRight :"5px"}} className="far fa-circle"></i>FLUTTER DEVELOPER</p>
                   <p><i style={{color:"#FFDD07" , fontSize:"0.5rem" , marginRight :"5px"}} className="far fa-circle"></i>CYBER SECURITY ENTHUSIAST</p>
                 </div>
-                <div className="resume-tag-div">
+                <div className="resume-tag-div" >
                     <SvgComponent
                       className="resume-svg"
                     />
