@@ -15,9 +15,9 @@ const Navbar = () =>{
 
       const window = e.currentTarget;
       if(window.pageYOffset > scrollPos){
-        setIsScrollingDown(true);
+        !isScrollingDown && setIsScrollingDown(true);
       }else if(window.pageYOffset < scrollPos){
-        setIsScrollingDown(false);
+        isScrollingDown && setIsScrollingDown(false);
       }
       setScrollPos(window.pageYOffset);
     },[scrollPos])
@@ -54,6 +54,7 @@ const Navbar = () =>{
 
     return(
         <div style={{top : !navbarButtonClicked && windowWidth < 800 && scrollPos > 400 && isScrollingDown && "-300px"}} className="portfolio-navbar">
+            {console.log("rerender")}
             <div onClick={navbarButtonClickHandler} style={{top : !navbarButtonClicked && windowWidth < 800 && scrollPos > 400 && isScrollingDown && "-100%"}} className="navbar-burger-button-div">
               <div className="navbar-burger-button"></div>
             </div>
@@ -116,7 +117,7 @@ const Navbar = () =>{
 
 
         </div>
-        <div style={{backgroundColor : scrollPos >= 177 && "transparent" , filter : scrollPos >= 50 && "drop-shadow(0px 10px 5px black)"}} className="portfolio-navbar-outer-div">
+        <div style={{filter : scrollPos >= 50 && "drop-shadow(0px 10px 5px black)"}} className="portfolio-navbar-outer-div">
           <div className="portfolio-navbar-inner-div">
 
             <div className="portfolio-navbar-logo-div">
