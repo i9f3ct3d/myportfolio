@@ -11,7 +11,7 @@ const Navlink=(props)=>{
     }
 
     return(
-        <div onClick={navlinkClickHandler} className="portfolio-navbar-navlink-div navlink-aboutme">
+        <div  onClick={navlinkClickHandler} className="portfolio-navbar-navlink-div navlink-aboutme">
             <span className="portfolio-navbar-navlink">{props && props.text}</span>
             <div className="navlink-underline"></div>
         </div>

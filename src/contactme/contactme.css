@@ -102,3 +102,13 @@
     text-decoration: none;
     color: #FFDD07;
 }
+
+@media(max-width : 500px){
+    .contactme-contact-links-text{
+        display: none;
+    }
+
+    .contactme-contact-links-div{
+        max-width: 200px;
+    }
+}

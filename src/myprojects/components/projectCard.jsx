@@ -1,9 +1,9 @@
 import React, { useRef } from 'react';
 import './projectCard.css'
 import ChatherePic from '../../images/Chathere.jpg'
-import PostifyPic from '../../images/postify.png'
-import JustmailitPic from '../../images/justmailit.png'
-import Myportfolio from '../../images/portfolioPic.png'
+import PostifyPic from '../../images/postify.jpg'
+import JustmailitPic from '../../images/justmailit.jpg'
+import Myportfolio from '../../images/portfolioPic.jpg'
 
 
 const ProjectCard=(props)=>{
