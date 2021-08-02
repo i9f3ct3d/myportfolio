@@ -54,7 +54,6 @@ const Navbar = () =>{
 
     return(
         <div style={{top : !navbarButtonClicked && windowWidth < 800 && scrollPos > 400 && isScrollingDown && "-300px"}} className="portfolio-navbar">
-            {console.log("rerender")}
             <div onClick={navbarButtonClickHandler} style={{top : !navbarButtonClicked && windowWidth < 800 && scrollPos > 400 && isScrollingDown && "-100%"}} className="navbar-burger-button-div">
               <div className="navbar-burger-button"></div>
             </div>
