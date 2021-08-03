@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React from 'react';
 import { GiFrayedArrow } from 'react-icons/gi'
 import './journeycard.css'
 
@@ -10,11 +10,11 @@ import NitD from '../../images/NitDPic.svg'
 
 const JourneyCard=(props)=>{
 
-    const [isIntersecting, setIntersecting] = useState(true)
-    const isIntersectingRef = useRef(1);
+    // const [isIntersecting, setIntersecting] = useState(true)
+    // const isIntersectingRef = useRef(1);
 
 
-    const ref = useRef();
+    // const ref = useRef();
     // const observer = new IntersectionObserver(
     //   ([entry]) => {
     //       if(isIntersectingRef.current < 3){
@@ -76,10 +76,10 @@ const JourneyCard=(props)=>{
                     <GiFrayedArrow/>
                 </div>
             </div>
-            <div style={{opacity : isIntersecting && "1" , transform : isIntersecting ? "none" : (props && props.dir && `translateX(${getTransform(props.dir)})`)}} className="journeycard-timestamp-div">
+            <div style={{opacity : 1 && "1" , transform : 1 ? "none" : (props && props.dir && `translateX(${getTransform(props.dir)})`)}} className="journeycard-timestamp-div">
                 <p>{props && props.time && props.time}</p>
             </div>
-            <div ref={ref} style={{opacity : isIntersecting && "1" , transform : isIntersecting ? "none" : (props && props.dir && `translateX(${getTransform(props.dir)})`)}} className="journeycard-details-div">
+            <div style={{opacity : 1 && "1" , transform : 1 ? "none" : (props && props.dir && `translateX(${getTransform(props.dir)})`)}} className="journeycard-details-div">
                 <div className="journeycard-details-inner-div">
                     <div style={{backgroundImage:  `url(${props && props.background && getBackImg(props.background)})` , borderColor : props && props.backgroundColor && props.backgroundColor}} className="journeycard-school-div">
                     <p className="journeycard-school-name">{props && props.schoolName && props.schoolName}</p>
@@ -107,4 +107,4 @@ const JourneyCard=(props)=>{
 
 }
 
-export default React.memo(JourneyCard);
+export default JourneyCard;

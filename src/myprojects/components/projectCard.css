@@ -109,10 +109,10 @@
     letter-spacing: 2px;
     text-shadow: 2px 2px 2px black;
     margin-bottom: 10px;
-    animation: animateTitle 2s linear infinite;
+    /* animation: animateTitle 2s linear infinite; */
 }
 
-@keyframes animateTitle {
+/* @keyframes animateTitle {
     0%{
         opacity: 0.5;
     }
@@ -122,7 +122,7 @@
     100%{
         opacity: 0.5;
     }
-}
+} */
 
 .projectcard-details-div{
     margin-left: 70px;
