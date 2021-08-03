@@ -4,11 +4,21 @@ import './aboutme.css'
 import aboutmeImg from '../images/myPic.svg'
 
 const Aboutme=()=>{
+    const isIntersectingRef = useRef(1);
     const [isIntersecting, setIntersecting] = useState(false)
     const ref = useRef();
     const observer = new IntersectionObserver(
-      ([entry]) => setIntersecting(entry.isIntersecting)
+      ([entry]) => {
+          if(isIntersectingRef.current < 3){
+              setIntersecting(entry.isIntersecting)
+              
+          }
+        }
     )
+
+    useEffect(()=>{
+        isIntersectingRef.current+=1
+    },[isIntersecting])
   
     useEffect(() => {
       observer.observe(ref.current)
