@@ -10,54 +10,40 @@ import NitD from '../../images/NitDPic.svg'
 
 const JourneyCard=(props)=>{
 
-    const [isIntersecting, setIntersecting] = useState(false)
+    const [isIntersecting, setIntersecting] = useState(true)
     const isIntersectingRef = useRef(1);
 
-    const [windowWidth , setWindowWidth] = useState(window.innerWidth);
 
     const ref = useRef();
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-          if(isIntersectingRef.current < 3){
-              setIntersecting(entry.isIntersecting);
-          }
-    }
-    )
+    // const observer = new IntersectionObserver(
+    //   ([entry]) => {
+    //       if(isIntersectingRef.current < 3){
+    //           setIntersecting(entry.isIntersecting);
+    //       }
+    // }
+    // )
 
-    useEffect(()=>{
-        isIntersectingRef.current = isIntersectingRef.current+1;
-    },[isIntersecting])
+    // useEffect(()=>{
+    //     isIntersectingRef.current = isIntersectingRef.current+1;
+    // },[isIntersecting])
   
-    useEffect(() => {
-      observer.observe(ref.current)
-      return () => { observer.disconnect() }
-    }, [])
+    // useEffect(() => {
+    //   observer.observe(ref.current)
+    //   return () => { observer.disconnect() }
+    // }, [])
 
 
-    const handleWindowResize=()=>{
-        setWindowWidth(window.innerWidth)
-    }
-
-    useEffect(()=>{
-        
-        window.addEventListener('resize' , handleWindowResize);
-
-        return()=>{
-            window.removeEventListener('resize' , handleWindowResize);
-        }
-
-    },[])
 
 
 
     const getTransform=(direction)=>{
         if(direction === "left"){
-            if(windowWidth <= 500){
+            if(window.innerWidth <= 500){
                 return "-50px";
             }
             return "-400px";
         }else{
-            if(windowWidth <= 500){
+            if(window.innerWidth <= 500){
                 return "50px";
             }
             return "400px";

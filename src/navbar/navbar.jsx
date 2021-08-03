@@ -84,7 +84,7 @@ const Navbar = () =>{
     }
 
 
-
+    
 
     return(
         <div style={{top : navbarGoUp && "-300px"}} className="portfolio-navbar">
