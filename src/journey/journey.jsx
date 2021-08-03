@@ -61,4 +61,4 @@ const Journey=()=>{
 
 }
 
-export default React.memo(Journey);
+export default Journey;

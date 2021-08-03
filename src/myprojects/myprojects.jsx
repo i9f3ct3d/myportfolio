@@ -156,4 +156,4 @@ const MyProjects=()=>{
 
 }
 
-export default React.memo(MyProjects);
+export default MyProjects;
