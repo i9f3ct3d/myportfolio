@@ -1,4 +1,4 @@
-import React,{ useEffect, useState } from 'react';
+import React,{ useEffect, useRef } from 'react';
 
 import './myprojects.css';
 import {IoIosArrowBack , IoIosArrowForward} from 'react-icons/io'
@@ -8,7 +8,7 @@ const maxPostCardNo = 4;
 
 const MyProjects=()=>{
 
-    const [postCardNo , setPostCardNo] = useState(1);
+    const postCardNo = useRef(1);
 
     useEffect(()=>{
         let ele = window.document.querySelector(".myprojects-carousel-scroll-full-div");
@@ -20,20 +20,22 @@ const MyProjects=()=>{
         let scrollEle = window.document.querySelector(".projectcard-full-div").clientWidth;
 
         
-        if(postCardNo+1 > maxPostCardNo){
-            
-            setPostCardNo(1);
+        if(postCardNo.current+1 > maxPostCardNo){
+
             ele.scrollBy({
                 left : -3*scrollEle,
                 behavior : 'smooth'
             })
+
+            postCardNo.current = 1;
             
         }else{
-            setPostCardNo(postCardNo+1);
+
             ele.scrollBy({
                 left : scrollEle,
                 behavior : 'smooth'
             })
+            postCardNo.current += 1;
         }
 
     }
@@ -42,19 +44,23 @@ const MyProjects=()=>{
         let ele = window.document.querySelector(".myprojects-carousel-scroll-full-div");
         let scrollEle = window.document.querySelector(".projectcard-full-div").clientWidth;
 
-        if(postCardNo-1 < 1){
-            setPostCardNo(maxPostCardNo);
+        if(postCardNo.current-1 < 1){
+            
             ele.scrollBy({
                 left : (3)*scrollEle,
                 behavior : 'smooth'
             })
 
+            postCardNo.current = maxPostCardNo;
+
         }else{
-            setPostCardNo(postCardNo-1);
+            
             ele.scrollBy({
                 left : -scrollEle,
                 behavior : 'smooth'
             })
+
+            postCardNo.current-=1;
         }
     }
 

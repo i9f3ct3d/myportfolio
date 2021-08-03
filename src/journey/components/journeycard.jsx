@@ -11,12 +11,22 @@ import NitD from '../../images/NitDPic.svg'
 const JourneyCard=(props)=>{
 
     const [isIntersecting, setIntersecting] = useState(false)
+    const isIntersectingRef = useRef(1);
+
     const [windowWidth , setWindowWidth] = useState(window.innerWidth);
 
     const ref = useRef();
     const observer = new IntersectionObserver(
-      ([entry]) => setIntersecting(entry.isIntersecting)
+      ([entry]) => {
+          if(isIntersectingRef.current < 3){
+              setIntersecting(entry.isIntersecting);
+          }
+    }
     )
+
+    useEffect(()=>{
+        isIntersectingRef.current = isIntersectingRef.current+1;
+    },[isIntersecting])
   
     useEffect(() => {
       observer.observe(ref.current)

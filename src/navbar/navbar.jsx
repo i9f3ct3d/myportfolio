@@ -9,7 +9,6 @@ const Navbar = () =>{
     
     const scrollPos = useRef(0);
     const isScrollingDown = useRef(false);
-    const windowWidth = useRef(window.innerWidth);
     const navbarGoUpRef = useRef(false);
     const navbarButtonClickedRef = useRef(false);
     const navbarDropShadowRef = useRef(false);
@@ -50,7 +49,7 @@ const Navbar = () =>{
 
     const navbarPos=()=>{
 
-        if(!navbarButtonClickedRef.current && windowWidth.current < 800 && scrollPos.current > 400 && isScrollingDown.current){
+        if(!navbarButtonClickedRef.current && window.innerWidth < 800 && scrollPos.current > 400 && isScrollingDown.current){
           if(!navbarGoUpRef.current){
               navbarGoUpRef.current = true;
               setNavbarGoUp(true);
@@ -84,19 +83,7 @@ const Navbar = () =>{
         setNavbarButtonClicked(prevNavbarButtonClicked=>!prevNavbarButtonClicked);
     }
 
-    const handleWindowWidthChange=()=>{
-        window.current = window.innerWidth;
-    }
 
-    useEffect(()=>{
-
-        window.addEventListener('resize',handleWindowWidthChange);
-        
-        return()=>{
-          window.addEventListener('resize',handleWindowWidthChange);
-        }
-
-    },[])
 
 
     return(
@@ -105,7 +92,7 @@ const Navbar = () =>{
               <div className="navbar-burger-button"></div>
             </div>
         <div style={{display : navbarButtonClicked && "block"}} className="navbar-backdrop"></div>
-        <div style={{right : navbarButtonClicked && "0"}} className="mobile-navbar-right-div">
+        <div style={{top : navbarButtonClicked && "0"}} className="mobile-navbar-right-div">
           <div className="mobile-navbar-inner-div">
                     <div className="mobile-navbar-image-div">
                         <img src={MyPic} alt="my img" className="mobile-navbar-image"/>
