@@ -1,4 +1,4 @@
-import React , {useState , useEffect , useCallback} from 'react'
+import React , {useState , useEffect , useCallback, useRef} from 'react'
 import Navlink from './components/navlink'
 import './navbar.css'
 import Logo from '../images/logo.gif'
@@ -6,22 +6,65 @@ import MyPic from '../images/myPic.svg'
 
 const Navbar = () =>{
 
-    const [scrollPos , setScrollPos] = useState(0);
-    const [isScrollingDown , setIsScrollingDown] = useState(false);
+    
+    const scrollPos = useRef(0);
+    const isScrollingDown = useRef(false);
+    const windowWidth = useRef(window.innerWidth);
+    const navbarGoUpRef = useRef(false);
+    const navbarButtonClickedRef = useRef(false);
+    const navbarDropShadowRef = useRef(false);
+
+    
     const [navbarButtonClicked , setNavbarButtonClicked] = useState(false);
-    const [windowWidth , setWindowWidth] = useState(window.innerWidth);
+    const [navbarGoUp , setNavbarGoUp] = useState(false);
+    const [navbarDropShadow , setNavbarDropShadow] = useState(false);
 
     const handleScroll=useCallback((e)=>{
-
       const window = e.currentTarget;
-      if(window.pageYOffset > scrollPos){
-        !isScrollingDown && setIsScrollingDown(true);
-      }else if(window.pageYOffset < scrollPos){
-        isScrollingDown && setIsScrollingDown(false);
+      if(window.pageYOffset > scrollPos.current){
+          isScrollingDown.current = true;
+      }else if(window.pageYOffset < scrollPos.current){
+        
+         isScrollingDown.current = false;
       }
-      setScrollPos(window.pageYOffset);
-    },[scrollPos])
-  
+      navbarPos()
+      scrollPos.current = window.pageYOffset;
+      
+      if(scrollPos.current >= 50){
+        if(!navbarDropShadowRef.current){
+          navbarDropShadowRef.current = true;
+          setNavbarDropShadow(true);
+        }
+      }else{
+          if(navbarDropShadowRef.current){
+            navbarDropShadowRef.current = false;
+            setNavbarDropShadow(false);
+          }
+      }
+
+    },[])
+
+
+
+
+
+    const navbarPos=()=>{
+
+        if(!navbarButtonClickedRef.current && windowWidth.current < 800 && scrollPos.current > 400 && isScrollingDown.current){
+          if(!navbarGoUpRef.current){
+              navbarGoUpRef.current = true;
+              setNavbarGoUp(true);
+          }
+        }else{
+
+          if(navbarGoUpRef.current){
+            navbarGoUpRef.current = false;
+            setNavbarGoUp(false);
+          }
+        }
+    }
+
+   
     useEffect(()=>{
       
       window.addEventListener('scroll',handleScroll,{passive : true});
@@ -32,14 +75,17 @@ const Navbar = () =>{
   
     },[handleScroll])
 
+
+
     const navbarButtonClickHandler=()=>{
       const hamburgerButton = window.document.querySelector(".navbar-burger-button");
         hamburgerButton.classList.toggle("open");
-        setNavbarButtonClicked(!navbarButtonClicked);
+        navbarButtonClickedRef.current = !navbarButtonClickedRef.current;
+        setNavbarButtonClicked(prevNavbarButtonClicked=>!prevNavbarButtonClicked);
     }
 
     const handleWindowWidthChange=()=>{
-        setWindowWidth(window.innerWidth);
+        window.current = window.innerWidth;
     }
 
     useEffect(()=>{
@@ -52,9 +98,10 @@ const Navbar = () =>{
 
     },[])
 
+
     return(
-        <div style={{top : !navbarButtonClicked && windowWidth < 800 && scrollPos > 400 && isScrollingDown && "-300px"}} className="portfolio-navbar">
-            <div onClick={navbarButtonClickHandler} style={{top : !navbarButtonClicked && windowWidth < 800 && scrollPos > 400 && isScrollingDown && "-100%"}} className="navbar-burger-button-div">
+        <div style={{top : navbarGoUp && "-300px"}} className="portfolio-navbar">
+            <div onClick={navbarButtonClickHandler} style={{top : navbarGoUp && "-100%"}} className="navbar-burger-button-div">
               <div className="navbar-burger-button"></div>
             </div>
         <div style={{display : navbarButtonClicked && "block"}} className="navbar-backdrop"></div>
@@ -68,6 +115,7 @@ const Navbar = () =>{
                         onClick={()=>{
                           const hamburgerButton = window.document.querySelector(".navbar-burger-button");
                           hamburgerButton.classList.toggle("open");
+                          navbarButtonClickedRef.current = false;
                           setNavbarButtonClicked(false);
                           document.querySelector(`#portfolio-about-me`).scrollIntoView({behavior: 'smooth'});
                         }} 
@@ -76,6 +124,7 @@ const Navbar = () =>{
                         onClick={()=>{
                           const hamburgerButton = window.document.querySelector(".navbar-burger-button");
                           hamburgerButton.classList.toggle("open");
+                          navbarButtonClickedRef.current = false;
                           setNavbarButtonClicked(false);
                           document.querySelector(`#portfolio-my-journey`).scrollIntoView({behavior: 'smooth'});
                         }}
@@ -84,6 +133,7 @@ const Navbar = () =>{
                         onClick={()=>{
                           const hamburgerButton = window.document.querySelector(".navbar-burger-button");
                           hamburgerButton.classList.toggle("open");
+                          navbarButtonClickedRef.current = false;
                           setNavbarButtonClicked(false);
                           document.querySelector(`#portfolio-my-projects`).scrollIntoView({behavior: 'smooth'});
                         }}
@@ -92,6 +142,7 @@ const Navbar = () =>{
                         onClick={()=>{
                           const hamburgerButton = window.document.querySelector(".navbar-burger-button");
                           hamburgerButton.classList.toggle("open");
+                          navbarButtonClickedRef.current = false;
                           setNavbarButtonClicked(false);
                           document.querySelector(`#portfolio-contact-me`).scrollIntoView({behavior: 'smooth'});
                         }}
@@ -116,7 +167,7 @@ const Navbar = () =>{
 
 
         </div>
-        <div style={{filter : scrollPos >= 50 && "drop-shadow(0px 10px 5px black)"}} className="portfolio-navbar-outer-div">
+        <div style={{filter : navbarDropShadow && "drop-shadow(0px 10px 5px black)"}} className="portfolio-navbar-outer-div">
           <div className="portfolio-navbar-inner-div">
 
             <div className="portfolio-navbar-logo-div">
