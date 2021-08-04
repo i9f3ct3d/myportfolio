@@ -2,6 +2,9 @@
     width: 700px;
     height: 820px;
     border-radius: 10px;
+    /* display: flex;
+    justify-content: flex-start;
+    display: inline-block; */
     position: relative;
     transition: all 700ms ease-in-out;
     margin: 0 auto;
@@ -56,13 +59,16 @@
     justify-content: center;
     border-radius: 5px 5px 0 0;
     border-bottom: 2px solid white;
+    /* transform: translateX(-400px); */
     transition: all 700ms ease-in-out;
+    /* position: absolute; */
+    /* top: 240px; */
     opacity: 0;
 }
 
 .journeycard-timestamp-div p :nth-child(1){
     text-shadow: 2px 2px 5px white;
-    font-family: 'Roboto';
+    font-family: 'Nunito';
 }
 
 .journeycard-details-div{
@@ -71,6 +77,10 @@
     border-radius: 0 5px 5px 5px;
     background-color: white;
     border: 2px solid black;
+    /* box-shadow: 7px 7px 10px grey; */
+    /* box-shadow: 7px 7px aqua; */
+    /* filter: drop-shadow(0 0 15px grey); */
+    /* padding: 10px; */
     position: relative;
     transform: translateX(-400px);
     transition: all 700ms ease-in-out;
@@ -96,6 +106,10 @@
     width: 100%;
     height: 100%;
     border-radius: 0 5px 5px 5px;
+    /* background-color: #13161b; */
+    background-color: yellow;
+    background-color: #393E46;
+    background-color: rgb(44, 187, 44);
     background-color: #E2E0E0;
 }
 
@@ -107,17 +121,9 @@
     background-size: cover;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     border-bottom: 2px solid #008000;
     position: relative;
-    background: none !important;
-    overflow: hidden;
-}
-
-.journeycard-school-div svg{
-    width: 100%;
-    height: 100%;
-    background-size: 100% 100%;
 }
 
 .journeycard-school-name{
@@ -157,6 +163,7 @@
 }
 
 .journeycard-stream-div span:nth-child(2){
+    color: white;
     color: #222831;
     font-weight: 500;
 }
@@ -174,6 +181,7 @@
 }
 
 .journeycard-marks-div span:nth-child(2){
+    color: white;
     color: #222831;
     font-weight: 500;
 }
