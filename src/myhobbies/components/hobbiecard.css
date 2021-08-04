@@ -10,6 +10,12 @@
     transition: all 500ms ease-in-out;
     position: relative;
     border: 2px solid black;
+
+    -webkit-transform: translateZ(0);
+-moz-transform: translateZ(0);
+-ms-transform: translateZ(0);
+-o-transform: translateZ(0);
+transform: translateZ(0);
 }
 
 .hobbie-card-background{
@@ -25,7 +31,7 @@
 }
 
 .hobbiecard-full-div:hover{
-    transform: scale(1.1) translateY(-10px);
+    transform: scale(1.1) translateY(-10px) translateZ(0);
 }
 
 .hobbiecard-icon-div{
@@ -40,14 +46,20 @@
     animation: identifier 5s linear infinite;
     text-shadow: 3px 3px 5px black;
     transition: all 500ms ease-in-out;
+
+    -webkit-transform: translateZ(0);
+-moz-transform: translateZ(0);
+-ms-transform: translateZ(0);
+-o-transform: translateZ(0);
+transform: translateZ(0);
 }
 
 @keyframes identifier {
     from{
-        transform: perspective(1000px) rotateY(360deg) rotateX(15deg) ;
+        transform: perspective(1000px) rotateY(360deg) rotateX(15deg) translateZ(0);
     }
     to{
-        transform: perspective(1000px) rotateY(0) rotateX(15deg);
+        transform: perspective(1000px) rotateY(0) rotateX(15deg) translateZ(0);
     }
 }
 
@@ -57,27 +69,33 @@
     text-shadow: 3px 3px 5px black;
     color: yellow;
     transition: all 500ms ease-in-out;
+
+    -webkit-transform: translateZ(0);
+-moz-transform: translateZ(0);
+-ms-transform: translateZ(0);
+-o-transform: translateZ(0);
+transform: translateZ(0);
 }
 
 @keyframes identifierSport {
     0%{
-        transform: translateY(0);
+        transform: translateY(0) translateZ(0);
         opacity: .2;
     }
     25%{
-        transform: translateY(110px);
+        transform: translateY(110px) translateZ(0);
         opacity: .4;
     }
     50%{
-        transform: translateY(-50px);
+        transform: translateY(-50px) translateZ(0);
         opacity: .6;
     }
     60%{
-        transform: translateY(0);
+        transform: translateY(0) translateZ(0);
         opacity: .8;
     }
     100%{
-        transform: translateY(0);
+        transform: translateY(0) translateZ(0);
         opacity: 1;
     }
 }
@@ -87,18 +105,24 @@
     animation: identifierMusic 2s linear infinite;
     text-shadow: 3px 3px 5px black;
     transition: all 500ms ease-in-out;
+
+    -webkit-transform: translateZ(0);
+-moz-transform: translateZ(0);
+-ms-transform: translateZ(0);
+-o-transform: translateZ(0);
+transform: translateZ(0);
     color: white;
 }
 
 @keyframes identifierMusic {
     0%{
-        transform: scale(1);
+        transform: scale(1) translateZ(0);
     }
     50%{
-        transform: scale(1.2);
+        transform: scale(1.2) translateZ(0);
     }
     100%{
-        transform: scale(1);
+        transform: scale(1) translateZ(0);
     }
 }
 

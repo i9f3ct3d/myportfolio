@@ -20,17 +20,27 @@
     font-size: 1.2rem;
     font-family: 'Roboto', sans-serif;
     transition: all 500ms ease-in-out;
+
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
 }
 
 .inputcomponent-placeholder{
     position: absolute;
     left: 40px;
     top: 50%;
-    transform: translateY(-50%);
     color: rgb(148, 148, 148);
     background: transparent;
     padding: 5px 10px 5px 0;
     pointer-events: none;
     font-size: 1.2rem;
     transition: all 500ms ease-in-out;
+    -webkit-transform:translateY(-50%) translateZ(0);
+    -moz-transform:translateY(-50%) translateZ(0);
+    -ms-transform:translateY(-50%) translateZ(0);
+    -o-transform:translateY(-50%) translateZ(0);
+    transform:translateY(-50%) translateZ(0);
 }

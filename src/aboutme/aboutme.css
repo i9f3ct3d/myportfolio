@@ -8,8 +8,12 @@
     height: 20rem;
     position: relative;
     transition: all 500ms ease-in-out;
-    transform: translateY(199px);
     filter: drop-shadow(0 20px 15px black);
+    -webkit-transform:translateY(199px) translateZ(0);
+    -moz-transform:translateY(199px) translateZ(0);
+    -ms-transform:translateY(199px) translateZ(0);
+    -o-transform:translateY(199px) translateZ(0);
+    transform:translateY(199px) translateZ(0);
 }
 
 .aboutme-full-div::before{
@@ -47,8 +51,6 @@
 
 .aboutme-text-div p:nth-child(1){
     font-size: 2.5rem;
-    color: #6BD8DB;
-    color: #dab04e;
     color: #222831;
     text-shadow: 4px 4px 10px grey;
     font-family: 'Dancing Script', cursive;
@@ -56,7 +58,7 @@
 
 .aboutme-text-div span:nth-child(2){
     font-family: 'Roboto', sans-serif;
-    font-weight: 900;
+    font-weight: 400;
 }
 
 .aboutme-image-div{
