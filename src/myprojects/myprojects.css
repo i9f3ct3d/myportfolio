@@ -71,7 +71,7 @@
     align-items: center;
     color: #FFDD07;
     cursor: pointer;
-    transition: all 500ms ease-in-out;
+    transition: all 200ms ease-in-out;
     opacity: 0.9;
     z-index: 2;
     display: inline-block;
@@ -163,7 +163,7 @@ transform: translateZ(0);
     align-items: center;
     color: #FFDD07;
     cursor: pointer;
-    transition: all 500ms ease-in-out;
+    transition: all 200ms ease-in-out;
     opacity: 0.9;
     z-index: 2;
     display: inline-block;

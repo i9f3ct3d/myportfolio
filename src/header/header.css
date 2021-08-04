@@ -3,14 +3,7 @@
     width: 100%;
     height: calc(34rem);
     filter: drop-shadow(0px 10px 10px black);
-    transition: all 500ms ease-in-out;
     border-top: 300px solid #393E46;
-
-    -webkit-transform: translateZ(0);
--moz-transform: translateZ(0);
--ms-transform: translateZ(0);
--o-transform: translateZ(0);
-transform: translateZ(0);
 }
 
 .portfolio-header-inner-div{
@@ -168,14 +161,7 @@ transform: translateZ(0);
 .resume-tag{
     text-decoration: none;
     color: #FFDD07;
-    transition: all 500ms ease-in-out;
     text-shadow: 2px 2px 3px rgb(31, 31, 31);
-
-    -webkit-transform: translateZ(0);
--moz-transform: translateZ(0);
--ms-transform: translateZ(0);
--o-transform: translateZ(0);
-transform: translateZ(0);
 }
 
 .resume-tag-div:hover{

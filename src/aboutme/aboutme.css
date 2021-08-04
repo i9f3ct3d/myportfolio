@@ -7,7 +7,7 @@
     width: 100%;
     height: 20rem;
     position: relative;
-    transition: all 500ms ease-in-out;
+    transition: all 200ms ease-in-out;
     filter: drop-shadow(0 20px 15px black);
     -webkit-transform:translateY(199px) translateZ(0);
     -moz-transform:translateY(199px) translateZ(0);

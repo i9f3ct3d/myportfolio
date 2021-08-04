@@ -25,7 +25,7 @@
     font-size: 1.3rem;
     right: 50%;
     top: 50%;
-    transform: translate(50%,-50%);
+    transform: translate(50%,-50%) translateZ(0);
     color: #FFDD07;
     z-index: 0;
     opacity: 1;
@@ -57,7 +57,7 @@ transform: translateZ(0);
     cursor: pointer;
     background-color: #2c2c2e;
     filter: drop-shadow(0 7px 10px black);
-    transition: all 500ms ease-in-out;
+    transition: all 200ms ease-in-out;
     box-shadow: inset 3px 3px 4px black;
     color: grey;
     z-index: 2;
@@ -73,14 +73,13 @@ transform: translateZ(0);
     background-color: #FFDD07;
     box-shadow: none;
     text-shadow: 2px 2px 3px grey;
-    transform: scale(1.01);
+    transform: scale(1.01) translateZ(0);
 }
 
 .contactme-send-button:active{
     transition: none !important;
     box-shadow: inset 3px 3px 4px black;
-    transform: scale(1);
-    -webkit-transform: translateZ(0);
+-webkit-transform: translateZ(0);
 -moz-transform: translateZ(0);
 -ms-transform: translateZ(0);
 -o-transform: translateZ(0);

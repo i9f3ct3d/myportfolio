@@ -5,35 +5,35 @@
     position: fixed;
     top: 0;
     left: 0;
-    transition: top 500ms ease-in-out;
 
-    -webkit-transform: translateZ(0);
--moz-transform: translateZ(0);
--ms-transform: translateZ(0);
--o-transform: translateZ(0);
-transform: translateZ(0);
 }
 
 .portfolio-navbar-logo-div{
     display: flex;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .navbar-logo{
-    width: 20rem;
-    height: 20rem;
+    width: 18rem;
+    height: 18rem;
+    border-radius: 100%;
+    filter: drop-shadow(0 0 10px black);
+    transform: rotate(-10deg) translateY(-10px);
 }
+
+
 
 .portfolio-navbar-outer-div{
     height: 100%;
     width: 100%;
-    transition: filter 300ms ease-in-out;
+    transition: filter 200ms ease-in-out;
 
     -webkit-transform: translateZ(0);
--moz-transform: translateZ(0);
--ms-transform: translateZ(0);
--o-transform: translateZ(0);
-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+    /* drop shadow */
 }
 
 .portfolio-navbar-inner-div{
@@ -47,12 +47,6 @@ transform: translateZ(0);
     position: relative;
 }
 
-.navbar-curve-svg{
-    display : block;
-    position : absolute;
-    bottom: 0;
-    left: 0;
-}
 
 .portfolio-navbar-navlinks-div{
     padding: 0 20px;
@@ -79,7 +73,7 @@ transform: translateZ(0);
 @media(max-width : 800px){
 
     .portfolio-navbar{
-        height: 300px;
+        height: 250px;
     }
 
     .portfolio-navbar-inner-div{
@@ -89,7 +83,6 @@ transform: translateZ(0);
     .navbar-logo{
         width: 14rem;
         height: 12rem;
-        transform: translateY(40px);
     }
 
     .portfolio-navbar-navlinks-div{
@@ -110,13 +103,7 @@ transform: translateZ(0);
         padding: 5px;
         cursor: pointer;
         z-index: 200000;
-        transition: top 500ms ease-in-out;
-
-        -webkit-transform: translateZ(0) rotate(180deg) scale(0.7);
-        -moz-transform: translateZ(0) rotate(180deg) scale(0.7);
-        -ms-transform: translateZ(0) rotate(180deg) scale(0.7);
-        -o-transform: translateZ(0) rotate(180deg) scale(0.7);
-        transform: translateZ(0) rotate(180deg) scale(0.7);
+        transform: scale(0.7);
     }
     
     .navbar-burger-button{
@@ -125,13 +112,6 @@ transform: translateZ(0);
         width: 50px;
         height: 6px;
         background-color: #FFDD07;
-        transition: all 500ms ease-in-out;
-
-        -webkit-transform: translateZ(0);
--moz-transform: translateZ(0);
--ms-transform: translateZ(0);
--o-transform: translateZ(0);
-transform: translateZ(0);
     }
     
     .navbar-burger-button::before{
@@ -142,7 +122,6 @@ transform: translateZ(0);
         background: #FFDD07;
         border-radius: 5px;
         box-shadow: 0 2px 5px rgba(255,101,47,.2);
-        transition: transform 500ms ease-in-out;
         left: 0;
 
         -webkit-transform:translateY(-16px) translateZ(0);
@@ -161,13 +140,12 @@ transform:translateY(-16px) translateZ(0);
         background: #FFDD07;
         border-radius: 5px;
         box-shadow: 0 2px 5px rgba(255,101,47,.2);
-        transition: transform 500ms ease-in-out;
 
         -webkit-transform:translateY(16px) translateZ(0);
--moz-transform:translateY(16px) translateZ(0);
--ms-transform:translateY(16px) translateZ(0);
--o-transform:translateY(16px) translateZ(0);
-transform:translateY(16px) translateZ(0);
+        -moz-transform:translateY(16px) translateZ(0);
+        -ms-transform:translateY(16px) translateZ(0);
+        -o-transform:translateY(16px) translateZ(0);
+        transform:translateY(16px) translateZ(0);
     }
 
     .navbar-burger-button.open{
@@ -191,15 +169,18 @@ transform:translateY(16px) translateZ(0);
         right: 0;
         top: -500%;
         z-index: 200;
-        transition: top 500ms ease-in-out;
+        transition: top 200ms ease-in-out;
         border-radius: 10px 0 0 10px;
         filter: drop-shadow(0 10px 20px black);
 
         -webkit-transform: translateZ(0);
--moz-transform: translateZ(0);
--ms-transform: translateZ(0);
--o-transform: translateZ(0);
-transform: translateZ(0);
+        -moz-transform: translateZ(0);
+        -ms-transform: translateZ(0);
+        -o-transform: translateZ(0);
+        transform: translateZ(0);
+
+        background-color: rgba(0, 0, 0, 0);
+        backdrop-filter: blur(5px);
     }
     
     .mobile-navbar-inner-div{
@@ -252,16 +233,6 @@ transform: translateZ(0);
         filter: none;
     }
 
-    .navbar-backdrop{
-        display: none;
-        position: fixed;
-        width: 100%;
-        height: 100vh;
-        background: linear-gradient(rgba(0, 0, 0, 0.411) , rgba(0, 0, 0, 0.411) );
-        left: 0;
-        top: 0;
-        z-index: 199;
-    }
 
 }
 
@@ -276,7 +247,6 @@ transform: translateZ(0);
 
     .navbar-logo{
         width: 9rem;
-        transform: translateZ(0);
     }
 }
 
