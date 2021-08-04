@@ -187,7 +187,8 @@
     }
     
     .mobile-navbar-image{
-        transform: translateY(10px);
+        width: 20rem;
+        height: 20rem;
     }
     
     .mobile-navbar-navlink-div{

@@ -24,6 +24,7 @@
     z-index: -2;
 }
 
+
 .aboutme-inner-div{
     padding: 1rem 2rem;
     width: 100%;
@@ -46,6 +47,8 @@
 
 .aboutme-text-div p:nth-child(1){
     font-size: 2.5rem;
+    color: #6BD8DB;
+    color: #dab04e;
     color: #222831;
     text-shadow: 4px 4px 10px grey;
     font-family: 'Dancing Script', cursive;
@@ -69,9 +72,6 @@
     width: 100%;
     height: auto;
     z-index: 2;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
 }
 
 @media(max-width : 1100px){

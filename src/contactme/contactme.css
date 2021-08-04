@@ -43,7 +43,7 @@
     width: 10rem;
     height: 3rem;
     font-size: 1.2rem;
-    font-family: 'Roboto';
+    font-family: 'Roboto', sans-serif;
     font-weight: 900;
     display: flex;
     justify-content: space-around;
