@@ -81,7 +81,7 @@ transform: translateZ(0);
     height: 1px;
     border-radius: 100%;
     background: linear-gradient(#222831ab , #222831ab );
-    transition: all 500ms ease-in-out;
+    transition: all 400ms ease-in-out;
     overflow: hidden;
     display: flex;
     flex-wrap: wrap;
@@ -119,6 +119,7 @@ transform:translateX(-50%) translateY(-50%) translateZ(0);
     text-shadow: 2px 2px 2px black;
     margin-bottom: 10px;
     animation: animateTitle 2s linear infinite;
+    transform: translateZ(0);
 }
 
 @keyframes animateTitle {

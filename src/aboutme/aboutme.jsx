@@ -1,14 +1,18 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useRef } from 'react'
 
 import './aboutme.css'
 import aboutmeImg from '../images/myPic.svg'
 
 const Aboutme=()=>{
-    const [isIntersecting, setIntersecting] = useState(false)
     const ref = useRef();
+
     const observer = new IntersectionObserver(
       ([entry]) => {
-              setIntersecting(entry.isIntersecting)
+        const aboutMe = window.document.getElementById("portfolio-about-me");
+        if(entry.isIntersecting){
+                aboutMe.style.transform = "translateY(0) translateZ(0)";
+                observer.disconnect();
+        }
         }
     )
 
@@ -21,7 +25,7 @@ const Aboutme=()=>{
 
     return(
 
-        <div ref={ref} id="portfolio-about-me" style={{transform : isIntersecting && "translateY(0) translateZ(0)"}} className="aboutme-full-div">
+        <div ref={ref} id="portfolio-about-me"  className="aboutme-full-div">
             <div className="aboutme-inner-div">
                 <div className="aboutme-text-div">
                     <p>Hi guys , myself Sushanta Saren</p>
