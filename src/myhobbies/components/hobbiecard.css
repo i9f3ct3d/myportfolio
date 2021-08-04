@@ -44,10 +44,10 @@
 
 @keyframes identifier {
     from{
-        transform: perspective(1000px) rotateY(360deg) rotateX(15deg) ;
+        transform:rotateY(360deg);
     }
     to{
-        transform: perspective(1000px) rotateY(0) rotateX(15deg);
+        transform:rotateY(0);
     }
 }
 
