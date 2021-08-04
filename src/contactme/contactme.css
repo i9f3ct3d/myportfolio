@@ -33,6 +33,11 @@
 
 .contactme-send-button:focus~.contact-icon-div{
     transition: all 1000ms ease-in-out;
+    -webkit-transform: translateZ(0);
+-moz-transform: translateZ(0);
+-ms-transform: translateZ(0);
+-o-transform: translateZ(0);
+transform: translateZ(0);
     right: 0;
     opacity: 0;
 }
@@ -56,6 +61,12 @@
     box-shadow: inset 3px 3px 4px black;
     color: grey;
     z-index: 2;
+
+    -webkit-transform: translateZ(0);
+-moz-transform: translateZ(0);
+-ms-transform: translateZ(0);
+-o-transform: translateZ(0);
+transform: translateZ(0);
 }
 
 .contactme-send-button:hover{
@@ -69,6 +80,11 @@
     transition: none !important;
     box-shadow: inset 3px 3px 4px black;
     transform: scale(1);
+    -webkit-transform: translateZ(0);
+-moz-transform: translateZ(0);
+-ms-transform: translateZ(0);
+-o-transform: translateZ(0);
+transform: translateZ(0);
 }
 
 .contactme-contact-links-div{

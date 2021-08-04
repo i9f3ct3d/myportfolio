@@ -21,7 +21,7 @@ const Aboutme=()=>{
 
     return(
 
-        <div ref={ref} id="portfolio-about-me" style={{transform : isIntersecting && "none"}} className="aboutme-full-div">
+        <div ref={ref} id="portfolio-about-me" style={{transform : isIntersecting && "translateY(0) translateZ(0)"}} className="aboutme-full-div">
             <div className="aboutme-inner-div">
                 <div className="aboutme-text-div">
                     <p>Hi guys , myself Sushanta Saren</p>

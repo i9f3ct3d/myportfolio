@@ -53,7 +53,6 @@
     max-width: 1200px;
     border-radius: 10px;
     position: relative;
-    transition: all 500ms ease-in-out;
     margin: 0 auto;
 }
 @media(max-width : 600px){
@@ -67,7 +66,6 @@
     border-radius: 10px;
     left: 20px;
     top: 50%;
-    transform:translateY(-50%);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -85,22 +83,31 @@
     justify-content: center;
     align-items: center;
     padding: 0.5rem 0.7rem 0 0;
+
+
+    -webkit-transform:translateY(-50%) translateZ(0);
+-moz-transform:translateY(-50%) translateZ(0);
+-ms-transform:translateY(-50%) translateZ(0);
+-o-transform:translateY(-50%) translateZ(0);
+transform:translateY(-50%) translateZ(0);
 }
+
 
 .myprojects-carousel-left-button:hover{
     opacity: 1;
-}
-
-.myprojects-carousel-left-button:hover{
     filter: drop-shadow(0 0 2px green);
-    transform:translateY(-50%) scale(1.1);
+    transform:translateY(-50%) scale(1.1) translateZ(0);
 }
 
 .myprojects-carousel-left-button-svg{
     font-size: 2rem;
-    transition: all 500ms ease-in-out;
     animation: animateLeftButton1 2s linear infinite;
-    transition: all 500ms ease-in-out;
+
+    -webkit-transform: translateZ(0);
+-moz-transform: translateZ(0);
+-ms-transform: translateZ(0);
+-o-transform: translateZ(0);
+transform: translateZ(0);
 }
 
 @keyframes animateLeftButton1 {
@@ -117,15 +124,19 @@
 
 .myprojects-carousel-left-button-svg2{
     font-size: 2rem;
-    transition: all 500ms ease-in-out;
     border-radius: 100%;
     position: absolute;
     left: 10px;
     top: 8px;
     color: #ffe53c;
-    transition: all 500ms ease-in-out;
 
     animation: animateLeftButton2 2s linear infinite;
+
+    -webkit-transform: translateZ(0);
+-moz-transform: translateZ(0);
+-ms-transform: translateZ(0);
+-o-transform: translateZ(0);
+transform: translateZ(0);
 }
 
 @keyframes animateLeftButton2 {
@@ -147,7 +158,6 @@
     border-radius: 10px;
     right: 20px;
     top: 50%;
-    transform:translateY(-50%);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -165,22 +175,31 @@
     justify-content: center;
     align-items: center;
     padding: 0.5rem 0.7rem 0 0;
+
+
+    -webkit-transform:translateY(-50%) translateZ(0);
+-moz-transform:translateY(-50%) translateZ(0);
+-ms-transform:translateY(-50%) translateZ(0);
+-o-transform:translateY(-50%) translateZ(0);
+transform:translateY(-50%) translateZ(0);
 }
+
 
 .myprojects-carousel-right-button:hover{
     opacity: 1;
-}
-
-.myprojects-carousel-right-button:hover{
     filter: drop-shadow(0 0 2px green);
-    transform:translateY(-50%) scale(1.1);
+    transform:translateY(-50%) scale(1.1) translateZ(0);
 }
 
 .myprojects-carousel-right-button-svg{
     font-size: 2rem;
-    transition: all 500ms ease-in-out;
     animation: animateLeftButton1 2s linear infinite;
-    transition: all 500ms ease-in-out;
+
+    -webkit-transform: translateZ(0);
+-moz-transform: translateZ(0);
+-ms-transform: translateZ(0);
+-o-transform: translateZ(0);
+transform: translateZ(0);
 }
 
 @keyframes animateLeftButton1 {
@@ -197,15 +216,19 @@
 
 .myprojects-carousel-right-button-svg2{
     font-size: 2rem;
-    transition: all 500ms ease-in-out;
     border-radius: 100%;
     position: absolute;
     left: 10px;
     top: 8px;
     color: #ffe53c;
-    transition: all 500ms ease-in-out;
 
     animation: animateLeftButton2 2s linear infinite;
+
+    -webkit-transform: translateZ(0);
+-moz-transform: translateZ(0);
+-ms-transform: translateZ(0);
+-o-transform: translateZ(0);
+transform: translateZ(0);
 }
 
 @keyframes animateLeftButton2 {

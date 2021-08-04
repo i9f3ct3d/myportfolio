@@ -2,10 +2,10 @@ import React, { useEffect, useRef, useState } from 'react';
 import { GiFrayedArrow } from 'react-icons/gi'
 import './journeycard.css'
 
-import KuehsPic from '../../images/kuehsPic.svg'
-import RKCPPic from '../../images/RKCP.svg'
-import Crla from '../../images/crla.svg'
-import NitD from '../../images/NitDPic.svg'
+import KuehsPic from '../../images/kuehsPic.jpg'
+import RKCPPic from '../../images/RKCP.jpg'
+import Crla from '../../images/crla.jpg'
+import NitD from '../../images/NitDPic.jpg'
 
 
 const JourneyCard=(props)=>{
@@ -65,10 +65,10 @@ const JourneyCard=(props)=>{
                     <GiFrayedArrow/>
                 </div>
             </div>
-            <div style={{opacity : isIntersecting && "1" , transform : isIntersecting ? "none" : (props && props.dir && `translateX(${getTransform(props.dir)})`)}} className="journeycard-timestamp-div">
+            <div style={{opacity : isIntersecting && "1" , transform : isIntersecting ? "none" : (props && props.dir && `translateZ(0) translateX(${getTransform(props.dir)})`)}} className="journeycard-timestamp-div">
                 <p>{props && props.time && props.time}</p>
             </div>
-            <div ref={ref} style={{opacity : isIntersecting && "1" , transform : isIntersecting ? "none" : (props && props.dir && `translateX(${getTransform(props.dir)})`)}} className="journeycard-details-div">
+            <div ref={ref} style={{opacity : isIntersecting && "1" , transform : isIntersecting ? "none" : (props && props.dir && `translateZ(0) translateX(${getTransform(props.dir)})`)}} className="journeycard-details-div">
                 <div className="journeycard-details-inner-div">
                     <div style={{backgroundImage:  `url(${props && props.background && getBackImg(props.background)})` , borderColor : props && props.backgroundColor && props.backgroundColor}} className="journeycard-school-div">
                     <p className="journeycard-school-name">{props && props.schoolName && props.schoolName}</p>
