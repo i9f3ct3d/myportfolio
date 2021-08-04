@@ -6,7 +6,7 @@
 }
 
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
 *{
   box-sizing: border-box;
   font-family: 'Roboto';
@@ -23,6 +23,5 @@
   left: 0;
   top: 0;
   z-index: -100;
-  background-color: #F0F2F5;
   background-color: #303136;
 }
