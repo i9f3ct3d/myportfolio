@@ -1,7 +1,6 @@
 import React , {useState , useEffect , useRef} from 'react'
 import Navlink from './components/navlink'
 import './navbar.css'
-import Logo from '../images/logo.gif'
 
 const Navbar = (props) =>{
 
@@ -158,9 +157,9 @@ const Navbar = (props) =>{
         <div style={{filter : navbarDropShadow && "drop-shadow(0px 10px 5px black)"}} className="portfolio-navbar-outer-div">
           <div className="portfolio-navbar-inner-div">
 
-            <div className="portfolio-navbar-logo-div">
+            {/* <div className="portfolio-navbar-logo-div">
               <img src={Logo} alt="logo" className="navbar-logo"/>
-            </div>
+            </div> */}
               <div className="portfolio-navbar-navlinks-div">
                         <Navlink
                             text="ABOUT ME"
