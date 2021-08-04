@@ -16,7 +16,6 @@
     content: "";
     width: 100%;
     height: 20px;
-    /* background-color: rgba(128, 128, 128, 0.568); */
     background: linear-gradient(grey , rgba(182, 182, 182, 0.63));
     box-shadow: 5px 5px 7px black;
     position: absolute;
@@ -25,7 +24,6 @@
     z-index: -2;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&display=swap');
 .aboutme-inner-div{
     padding: 1rem 2rem;
     width: 100%;
@@ -46,18 +44,15 @@
     display: inline-block
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap');
 .aboutme-text-div p:nth-child(1){
     font-size: 2.5rem;
-    color: #6BD8DB;
-    color: #dab04e;
     color: #222831;
     text-shadow: 4px 4px 10px grey;
     font-family: 'Dancing Script', cursive;
 }
 
 .aboutme-text-div span:nth-child(2){
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 900;
 }
 

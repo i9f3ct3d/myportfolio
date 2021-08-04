@@ -1,4 +1,3 @@
-import React from 'react'
 import HobbieCard from './components/hobbiecard'
 
 import './myhobbies.css'
