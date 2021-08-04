@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/myportfolio/static/css/main.bb3adae9.chunk.css",
-    "main.js": "/myportfolio/static/js/main.f8f98bbb.chunk.js",
-    "main.js.map": "/myportfolio/static/js/main.f8f98bbb.chunk.js.map",
+    "main.css": "/myportfolio/static/css/main.dc544923.chunk.css",
+    "main.js": "/myportfolio/static/js/main.97c60f69.chunk.js",
+    "main.js.map": "/myportfolio/static/js/main.97c60f69.chunk.js.map",
     "runtime-main.js": "/myportfolio/static/js/runtime-main.2623980f.js",
     "runtime-main.js.map": "/myportfolio/static/js/runtime-main.2623980f.js.map",
-    "static/js/2.aa8156da.chunk.js": "/myportfolio/static/js/2.aa8156da.chunk.js",
-    "static/js/2.aa8156da.chunk.js.map": "/myportfolio/static/js/2.aa8156da.chunk.js.map",
+    "static/js/2.ecc2b292.chunk.js": "/myportfolio/static/js/2.ecc2b292.chunk.js",
+    "static/js/2.ecc2b292.chunk.js.map": "/myportfolio/static/js/2.ecc2b292.chunk.js.map",
     "index.html": "/myportfolio/index.html",
-    "static/css/main.bb3adae9.chunk.css.map": "/myportfolio/static/css/main.bb3adae9.chunk.css.map",
-    "static/js/2.aa8156da.chunk.js.LICENSE.txt": "/myportfolio/static/js/2.aa8156da.chunk.js.LICENSE.txt",
+    "static/css/main.dc544923.chunk.css.map": "/myportfolio/static/css/main.dc544923.chunk.css.map",
+    "static/js/2.ecc2b292.chunk.js.LICENSE.txt": "/myportfolio/static/js/2.ecc2b292.chunk.js.LICENSE.txt",
     "static/media/Chathere.878a1b9d.jpg": "/myportfolio/static/media/Chathere.878a1b9d.jpg",
     "static/media/NitDPic.cae2210c.jpg": "/myportfolio/static/media/NitDPic.cae2210c.jpg",
     "static/media/RKCP.f0eddbcd.jpg": "/myportfolio/static/media/RKCP.f0eddbcd.jpg",
@@ -17,15 +17,14 @@
     "static/media/crla.647f21f1.jpg": "/myportfolio/static/media/crla.647f21f1.jpg",
     "static/media/justmailit.66877e82.jpg": "/myportfolio/static/media/justmailit.66877e82.jpg",
     "static/media/kuehsPic.244f6616.jpg": "/myportfolio/static/media/kuehsPic.244f6616.jpg",
-    "static/media/logo.ed71f142.gif": "/myportfolio/static/media/logo.ed71f142.gif",
     "static/media/myPic.87c45d7b.svg": "/myportfolio/static/media/myPic.87c45d7b.svg",
     "static/media/portfolioPic.d6592580.jpg": "/myportfolio/static/media/portfolioPic.d6592580.jpg",
     "static/media/postify.b7062261.jpg": "/myportfolio/static/media/postify.b7062261.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.2623980f.js",
-    "static/js/2.aa8156da.chunk.js",
-    "static/css/main.bb3adae9.chunk.css",
-    "static/js/main.f8f98bbb.chunk.js"
+    "static/js/2.ecc2b292.chunk.js",
+    "static/css/main.dc544923.chunk.css",
+    "static/js/main.97c60f69.chunk.js"
   ]
 }
