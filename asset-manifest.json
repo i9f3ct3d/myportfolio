@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/myportfolio/static/css/main.7068aa2c.chunk.css",
+    "main.js": "/myportfolio/static/js/main.1c490b5d.chunk.js",
+    "main.js.map": "/myportfolio/static/js/main.1c490b5d.chunk.js.map",
+    "runtime-main.js": "/myportfolio/static/js/runtime-main.2623980f.js",
+    "runtime-main.js.map": "/myportfolio/static/js/runtime-main.2623980f.js.map",
+    "static/js/2.a38cccc8.chunk.js": "/myportfolio/static/js/2.a38cccc8.chunk.js",
+    "static/js/2.a38cccc8.chunk.js.map": "/myportfolio/static/js/2.a38cccc8.chunk.js.map",
+    "index.html": "/myportfolio/index.html",
+    "static/css/main.7068aa2c.chunk.css.map": "/myportfolio/static/css/main.7068aa2c.chunk.css.map",
+    "static/js/2.a38cccc8.chunk.js.LICENSE.txt": "/myportfolio/static/js/2.a38cccc8.chunk.js.LICENSE.txt",
+    "static/media/Chathere.878a1b9d.jpg": "/myportfolio/static/media/Chathere.878a1b9d.jpg",
+    "static/media/myprojects.css": "/myportfolio/static/media/codeImage.56d5cc39.jpg",
+    "static/media/justmailit.66877e82.jpg": "/myportfolio/static/media/justmailit.66877e82.jpg",
+    "static/media/portfolioPic.d6592580.jpg": "/myportfolio/static/media/portfolioPic.d6592580.jpg",
+    "static/media/postify.b7062261.jpg": "/myportfolio/static/media/postify.b7062261.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2623980f.js",
+    "static/js/2.a38cccc8.chunk.js",
+    "static/css/main.7068aa2c.chunk.css",
+    "static/js/main.1c490b5d.chunk.js"
+  ]
+}
