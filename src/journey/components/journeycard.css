@@ -6,11 +6,6 @@
     margin: 0 auto;
 }
 
-@media(max-width : 750px){
-    .journeycard-full-div{
-        width: 98%;
-    }
-}
 
 .journeycard-year-div{
     height: 240px;
@@ -116,13 +111,25 @@ transform: translateZ(0);
     border-radius: 0 5px 0 0;
     height: 60%;
     width: 100%;
+
     background-repeat: no-repeat;
     background-size: cover;
+
+
     display: flex;
     justify-content: center;
     align-items: center;
     border-bottom: 2px solid #008000;
     position: relative;
+}
+
+.journeycard-school-image{
+    position: absolute;
+    border-radius: 0 5px 0 0;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
 }
 
 .journeycard-school-name{
@@ -183,3 +190,9 @@ transform: translateZ(0);
     font-weight: 500;
 }
 
+
+@media(max-width : 750px){
+    .journeycard-full-div{
+        width: 98%;
+    }
+}

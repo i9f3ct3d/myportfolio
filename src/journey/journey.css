@@ -4,3 +4,68 @@
     width: 100%;
     overflow-x: hidden;
 }
+
+.journeyloading-screen{
+    /* height: 500px; */
+    width: calc(100vw - 20px);
+    margin-left: 20px;
+}
+
+.journeyloading-screen-big-div{
+    height: 40px;
+    background-color: rgba(128, 128, 128, 0.123);
+    border-radius: 0 10px 10px 0;
+    animation: animateWidthBig 1s linear infinite;
+    margin-bottom: 10px;
+    width: 90%;
+}
+
+@keyframes animateWidthBig {
+
+    0%{
+        background-color: rgba(128, 128, 128, 0.123);
+        /* width: 80%; */
+        opacity: 1;
+    }
+    50%{
+        background-color: rgba(128, 128, 128, 0.041);
+        /* width: 90%; */
+        opacity: 0.5;
+    }
+    100%{
+        background-color: rgba(128, 128, 128, 0.123);
+        /* width: 80%; */
+        opacity: 1;
+    }
+    
+}
+
+.journeyloading-screen-small-div{
+    height: 30px;
+    background-color: rgba(128, 128, 128, 0.123);
+    border-radius: 0 10px 10px 0;
+    animation: animateWidthSmall 1s linear infinite;
+    /* animation-delay: 0.1s; */
+    margin-bottom: 20px;
+    width: 60%;
+}
+
+@keyframes animateWidthSmall {
+
+    0%{
+
+        background-color: rgba(128, 128, 128, 0.041);
+        /* width: 60%; */
+        opacity: 0.5;
+    }
+    50%{
+        background-color: rgba(128, 128, 128, 0.123);
+        /* width: 50%; */
+        opacity: 1;
+    }
+    100%{
+        background-color: rgba(128, 128, 128, 0.041);
+        /* width: 60%; */
+        opacity: 0.5;
+    }
+}

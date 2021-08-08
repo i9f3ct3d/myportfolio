@@ -3,6 +3,9 @@ import Navlink from './components/navlink'
 import './navbar.css'
 import MyPic from '../images/myPic.svg'
 
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
+
 const Navbar = () =>{
 
     
@@ -174,7 +177,15 @@ const Navbar = () =>{
         <div  className="mobile-navbar-right-div">
           <div className="mobile-navbar-inner-div">
                     <div className="mobile-navbar-image-div">
-                        <img src={MyPic} alt="my img" className="mobile-navbar-image"/>
+                        <LazyLoadImage
+                          effect="blur"
+                          src={MyPic}
+                          alt="my img" 
+                          className="mobile-navbar-image"
+                          height="20rem"
+                          width="20rem"
+                          placeholderSrc={process.env.PUBLIC_URL + "/logo192.png"}
+                        />
                     </div>
                     <div className="mobile-navbar-navlink-div">
                         <p 
@@ -238,7 +249,6 @@ const Navbar = () =>{
 
             <div className="portfolio-navbar-logo-div">
                 <LogoSvg/>
-              {/* <img src={Logo} alt="logo" className="navbar-logo"/> */}
             </div>
               <div className="portfolio-navbar-navlinks-div">
                         <Navlink

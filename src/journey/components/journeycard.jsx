@@ -1,11 +1,14 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { GiFrayedArrow } from 'react-icons/gi'
 import './journeycard.css'
 
-import KuehsPic from '../../images/kuehsPic.jpg'
-import RKCPPic from '../../images/RKCP.jpg'
-import Crla from '../../images/crla.jpg'
-import NitD from '../../images/NitDPic.jpg'
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
+
+import KuehsPic from '../../images/kuehsPic.jpg';
+import RKCPPic from '../../images/RKCP.jpg';
+import Crla from '../../images/crla.jpg';
+import NitD from '../../images/NitDPic.jpg';
 
 
 const JourneyCard=(props)=>{
@@ -77,9 +80,18 @@ const JourneyCard=(props)=>{
             </div>
             <div ref={ref} style={{transform : (props && props.dir && `translateZ(0) translateX(${getTransform(props.dir)})`)}} className="journeycard-details-div">
                 <div className="journeycard-details-inner-div">
-                    <div style={{backgroundImage:  `url(${props && props.background && getBackImg(props.background)})` , borderColor : props && props.backgroundColor && props.backgroundColor}} className="journeycard-school-div">
+
+                    <div style={{borderColor : props && props.backgroundColor && props.backgroundColor}} className="journeycard-school-div">
+                        <LazyLoadImage
+                         height="100%" 
+                         width="100%" 
+                         className="journeycard-school-image" 
+                         src={props && props.background && getBackImg(props.background)} 
+                         placeholderSrc={process.env.PUBLIC_URL + "/logo192.png"} 
+                        />
                     <p className="journeycard-school-name">{props && props.schoolName && props.schoolName}</p>
                     </div>
+
                     <div className="journeycard-academics-div">
                         <div className="journeycard-stream-div" style={{borderColor : props && props.backgroundColor && props.backgroundColor}}>
                             <p>Stream :</p>

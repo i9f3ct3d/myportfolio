@@ -1,8 +1,8 @@
-import React,{ useEffect, useRef } from 'react';
+import React,{ useEffect, useRef , Suspense , lazy} from 'react';
 
 import './myprojects.css';
 import {IoIosArrowBack , IoIosArrowForward} from 'react-icons/io'
-import ProjectCard from './components/projectCard';
+const ProjectCard = lazy(()=>import('./components/projectCard'));
 
 const maxPostCardNo = 4;
 
@@ -76,6 +76,7 @@ const MyProjects=()=>{
                 <div style={{backgroundColor : "black"}} className="myhobbies-underline"></div>
             </div>
 
+            <Suspense fallback={<div style={{height :"1170px" , width : "100%" , display : "flex" , justifyContent : "center" , alignItems : "center"}}><i className="fas fa-spinner projectcard-backgroundimage-div-loading-background"></i></div>}>
             <div className="myprojects-outer-div">
                 <div className="myprojects-inner-div">
                     <div onClick={carouselLeftArrowClickHandler} className="myprojects-carousel-left-button">
@@ -151,6 +152,7 @@ const MyProjects=()=>{
                         </defs>
                     </svg>
             </div>
+            </Suspense>
         </div>
     );
 

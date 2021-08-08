@@ -1,7 +1,7 @@
-import React from 'react';
-import JourneyCard from './components/journeycard';
-
+import React,{Suspense , lazy} from 'react';
 import './journey.css'
+const JourneyCard = lazy(()=>import('./components/journeycard'));
+
 
 const Journey=()=>{
 
@@ -15,6 +15,149 @@ const Journey=()=>{
                 <div className="myhobbies-underline"></div>
             </div>
             <div className="journey-inner-div">
+                <Suspense fallback={
+                <div className="journeyloading-screen">
+                    <div className="journeyloading-screen-big-div">
+                    </div>
+                    <div className="journeyloading-screen-small-div">
+                    </div>
+                    <div className="journeyloading-screen-big-div">
+                    </div>
+                    <div className="journeyloading-screen-small-div">
+                    </div>
+                    <div className="journeyloading-screen-big-div">
+                    </div>
+                    <div className="journeyloading-screen-small-div">
+                    </div>
+                    <div className="journeyloading-screen-big-div">
+                    </div>
+                    <div className="journeyloading-screen-small-div">
+                    </div>
+
+                    <div className="journeyloading-screen-big-div">
+                    </div>
+                    <div className="journeyloading-screen-small-div">
+                    </div>
+                    <div className="journeyloading-screen-big-div">
+                    </div>
+                    <div className="journeyloading-screen-small-div">
+                    </div>
+                    <div className="journeyloading-screen-big-div">
+                    </div>
+                    <div className="journeyloading-screen-small-div">
+                    </div>
+                    <div className="journeyloading-screen-big-div">
+                    </div>
+                    <div className="journeyloading-screen-small-div">
+                    </div>
+
+                    <div className="journeyloading-screen-big-div">
+                    </div>
+                    <div className="journeyloading-screen-small-div">
+                    </div>
+                    <div className="journeyloading-screen-big-div">
+                    </div>
+                    <div className="journeyloading-screen-small-div">
+                    </div>
+                    <div className="journeyloading-screen-big-div">
+                    </div>
+                    <div className="journeyloading-screen-small-div">
+                    </div>
+                    <div className="journeyloading-screen-big-div">
+                    </div>
+                    <div className="journeyloading-screen-small-div">
+                    </div>
+
+                    <div className="journeyloading-screen-big-div">
+                    </div>
+                    <div className="journeyloading-screen-small-div">
+                    </div>
+                    <div className="journeyloading-screen-big-div">
+                    </div>
+                    <div className="journeyloading-screen-small-div">
+                    </div>
+                    <div className="journeyloading-screen-big-div">
+                    </div>
+                    <div className="journeyloading-screen-small-div">
+                    </div>
+                    <div className="journeyloading-screen-big-div">
+                    </div>
+                    <div className="journeyloading-screen-small-div">
+                    </div>
+
+                    <div className="journeyloading-screen-big-div">
+                    </div>
+                    <div className="journeyloading-screen-small-div">
+                    </div>
+                    <div className="journeyloading-screen-big-div">
+                    </div>
+                    <div className="journeyloading-screen-small-div">
+                    </div>
+                    <div className="journeyloading-screen-big-div">
+                    </div>
+                    <div className="journeyloading-screen-small-div">
+                    </div>
+                    <div className="journeyloading-screen-big-div">
+                    </div>
+                    <div className="journeyloading-screen-small-div">
+                    </div>
+
+                    <div className="journeyloading-screen-big-div">
+                    </div>
+                    <div className="journeyloading-screen-small-div">
+                    </div>
+                    <div className="journeyloading-screen-big-div">
+                    </div>
+                    <div className="journeyloading-screen-small-div">
+                    </div>
+                    <div className="journeyloading-screen-big-div">
+                    </div>
+                    <div className="journeyloading-screen-small-div">
+                    </div>
+                    <div className="journeyloading-screen-big-div">
+                    </div>
+                    <div className="journeyloading-screen-small-div">
+                    </div>
+
+                    <div className="journeyloading-screen-big-div">
+                    </div>
+                    <div className="journeyloading-screen-small-div">
+                    </div>
+                    <div className="journeyloading-screen-big-div">
+                    </div>
+                    <div className="journeyloading-screen-small-div">
+                    </div>
+                    <div className="journeyloading-screen-big-div">
+                    </div>
+                    <div className="journeyloading-screen-small-div">
+                    </div>
+                    <div className="journeyloading-screen-big-div">
+                    </div>
+                    <div className="journeyloading-screen-small-div">
+                    </div>
+
+                    <div className="journeyloading-screen-big-div">
+                    </div>
+                    <div className="journeyloading-screen-small-div">
+                    </div>
+                    <div className="journeyloading-screen-big-div">
+                    </div>
+                    <div className="journeyloading-screen-small-div">
+                    </div>
+                    <div className="journeyloading-screen-big-div">
+                    </div>
+                    <div className="journeyloading-screen-small-div">
+                    </div>
+                    <div className="journeyloading-screen-big-div">
+                    </div>
+                    <div className="journeyloading-screen-small-div">
+                    </div>
+
+                    <div className="journeyloading-screen-big-div">
+                    </div>
+                    <div className="journeyloading-screen-small-div">
+                    </div>
+                </div>}>
                 <JourneyCard
                     time="2005 - 2010"
                     schoolName="R.K.C.P."
@@ -54,6 +197,7 @@ const Journey=()=>{
                     dir = "right" 
                     isLast={true}
                 />
+                </Suspense>
                 <br/>
             </div>
         </div>
