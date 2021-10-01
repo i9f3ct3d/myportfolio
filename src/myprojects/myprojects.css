@@ -1,6 +1,6 @@
 .myprojects-full-div{
     width: 100%;
-    background-color: #FFDD07;
+    background: linear-gradient(to left , #303136 ,#6BD8DB ,  #FFDD07);
     border-radius: 10px;
     padding-bottom: 150px;
     filter: drop-shadow(0 10px 5px black);
@@ -69,7 +69,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #FFDD07;
+    color: #08FDD8;
     cursor: pointer;
     transition: all 200ms ease-in-out;
     opacity: 0.9;
@@ -78,7 +78,7 @@
 
 
     border-radius: 100%;
-    border: 3px solid #ffe53c;
+    border: 3px solid #08FDD8;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -95,7 +95,7 @@ transform:translateY(-50%) translateZ(0);
 
 .myprojects-carousel-left-button:hover{
     opacity: 1;
-    filter: drop-shadow(0 0 2px green);
+    /* filter: drop-shadow(0 0 2px green); */
     transform:translateY(-50%) scale(1.1) translateZ(0);
 }
 
@@ -129,6 +129,7 @@ transform: translateZ(0);
     left: 10px;
     top: 8px;
     color: #ffe53c;
+    color : green;
 
     animation: animateLeftButton2 2s linear infinite;
 
@@ -161,7 +162,7 @@ transform: translateZ(0);
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #FFDD07;
+    color: #08FDD8;
     cursor: pointer;
     transition: all 200ms ease-in-out;
     opacity: 0.9;
@@ -170,7 +171,7 @@ transform: translateZ(0);
 
 
     border-radius: 100%;
-    border: 3px solid #ffe53c;
+    border: 3px solid #08FDD8;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -187,7 +188,7 @@ transform:translateY(-50%) translateZ(0);
 
 .myprojects-carousel-right-button:hover{
     opacity: 1;
-    filter: drop-shadow(0 0 2px green);
+    /* filter: drop-shadow(0 0 2px green); */
     transform:translateY(-50%) scale(1.1) translateZ(0);
 }
 
@@ -221,6 +222,7 @@ transform: translateZ(0);
     left: 10px;
     top: 8px;
     color: #ffe53c;
+    color : green;
 
     animation: animateLeftButton2 2s linear infinite;
 

@@ -18,17 +18,20 @@ const MyHobbies=()=>{
                     title="Playing Games"
                     icon="fas fa-gamepad"
                     name="game"
+                    // translate="translateX(-50px)"
                 />
                 <HobbieCard
                     title="Sports"
                     icon="fas fa-futbol"
                     name="sport"
                     height="200px"
+                    // translate="translateY(-100px)"
                 />
                 <HobbieCard
                     title="Music"
                     icon="fas fa-headphones-alt"
                     name="music"
+                    // translate="translateX(50px)"
                 />
             </div>
         </div>

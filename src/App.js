@@ -4,6 +4,7 @@ import './App.css';
 import Navbar from './navbar/navbar'
 import Header from './header/header'
 import Aboutme from './aboutme/aboutme'
+import NavbarCloser from './navbarCloser/navbarCloser';
 
 const Journey = lazy(()=>import('./journey/journey'));
 const MyProjects = lazy(()=>import('./myprojects/myprojects'));
@@ -18,6 +19,7 @@ function App() {
     <div className="App">
       <div className="background"></div>
         <Navbar/>
+        {/* <NavbarCloser/> */}
         <Header/>
         <Aboutme/>
         <Suspense fallback={<div/>}>

@@ -1,0 +1,13 @@
+.navabr-closer-full-div{
+
+    height: 150px;
+    width: 150px;
+    border-radius: 20px;
+    background: black;
+    position: fixed;
+    top: 50%;
+    /* left: 0; */
+    transform: translate(-50% , -50%) rotate(45deg);
+    z-index: 1000000;
+
+}

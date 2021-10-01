@@ -5,12 +5,19 @@ import aboutmeImg from '../images/myPic.svg'
 
 const Aboutme=()=>{
     const ref = useRef();
+    const imageRef = useRef();
+    const textRef = useRef();
 
     const observer = new IntersectionObserver(
       ([entry]) => {
         const aboutMe = window.document.getElementById("portfolio-about-me");
         if(entry.isIntersecting){
                 aboutMe.style.transform = "translateY(0) translateZ(0)";
+                aboutMe.style.opacity = "1";
+                imageRef.current.style.opacity = "1";
+                imageRef.current.style.right = "0";
+                textRef.current.style.opacity = "1";
+                textRef.current.style.left = "1rem";
                 observer.disconnect();
         }
         }
@@ -27,12 +34,12 @@ const Aboutme=()=>{
 
         <div ref={ref} id="portfolio-about-me"  className="aboutme-full-div">
             <div className="aboutme-inner-div">
-                <div className="aboutme-text-div">
+                <div ref={textRef} className="aboutme-text-div">
                     <p>Hi guys , myself Sushanta Saren</p>
                     <span>I am a junior Computer Science & Engineering student in National Institute of Technology Durgapur.Right now I have developed a keen interest towards Cyber Security but Web Development has always been my cup of  <i style={{color:"#FFDD07" , textShadow :"2px 2px 5px grey"}} className="fas fa-mug-hot"></i></span>
                 </div>
             </div>
-            <div className="aboutme-image-div">
+            <div ref={imageRef} className="aboutme-image-div">
                 <img
                     className="aboutme-image"
                     alt="My Img"

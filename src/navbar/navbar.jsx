@@ -17,6 +17,7 @@ const Navbar = () =>{
     const handleScroll=useCallback((e)=>{
       const window = e.currentTarget;
       const navbarOuterDiv = window.document.querySelector(".portfolio-navbar-outer-div");
+      const portfolioNavbar = window.document.querySelector(".portfolio-navbar");
       
       scrollPos.current = window.pageYOffset;
       
@@ -24,11 +25,13 @@ const Navbar = () =>{
         if(!navbarDropShadowRef.current){
           navbarDropShadowRef.current = true;
           navbarOuterDiv.style.filter = "drop-shadow(0px 10px 5px black)";
+          portfolioNavbar.style.opacity = "0.8";
         }
       }else{
           if(navbarDropShadowRef.current){
             navbarDropShadowRef.current = false;
             navbarOuterDiv.style.filter = "none";
+            portfolioNavbar.style.opacity = "1";
           }
       }
 
@@ -53,10 +56,16 @@ const Navbar = () =>{
       const hamburgerButton = window.document.querySelector(".navbar-burger-button");
       const mobileNavbar = window.document.querySelector(".mobile-navbar-right-div");
         hamburgerButton.classList.toggle("open");
+        const portfolioNavbar = window.document.querySelector(".portfolio-navbar");
+
+        
+
         if(navbarButtonRef.current.classList.contains("open")){
           mobileNavbar.style.top = "0";
+          portfolioNavbar.style.opacity = "1";
         }else{
           mobileNavbar.style.top = "-500%";
+          portfolioNavbar.style.opacity = "0.8";
         }
     }
 
@@ -252,18 +261,22 @@ const Navbar = () =>{
             </div>
               <div className="portfolio-navbar-navlinks-div">
                         <Navlink
+                            icon="far fa-user"
                             text="ABOUT ME"
                             location="portfolio-about-me"
                         />
                         <Navlink
+                            icon="fas fa-train"
                             text="MY JOURNEY"
                             location="portfolio-my-journey"
                         />
                         <Navlink
+                            icon="far fa-copy"
                             text="PROJECTS"
                             location="portfolio-my-projects"
                         />
                         <Navlink
+                            icon="far fa-id-card"
                             text="CONTACT"
                             location="portfolio-contact-me"
                         />

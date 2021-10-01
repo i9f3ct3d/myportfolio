@@ -7,12 +7,19 @@
     cursor: pointer;
     color: #fafafa;
     transition: all 500ms ease-in-out;
+    opacity: 0;
+-webkit-transform: translateZ(0) translateX(10px);
+-moz-transform: translateZ(0) translateX(10px);
+-ms-transform: translateZ(0) translateX(10px);
+-o-transform: translateZ(0) translateX(10px);
+transform: translateZ(0) translateX(10px);
+}
 
-    -webkit-transform: translateZ(0);
--moz-transform: translateZ(0);
--ms-transform: translateZ(0);
--o-transform: translateZ(0);
-transform: translateZ(0);
+.navlink-icon{
+    padding-top: 17px;
+    padding-right: 10px;
+    font-size: 20px;
+    text-shadow: 3px 3px 3px black;
 }
 
 .portfolio-navbar-navlink{
@@ -23,13 +30,13 @@ transform: translateZ(0);
 
 .portfolio-navbar-navlink-div:hover{
     color: #FFD369;
+    transform: scale(1.05) translateZ(0);
 }
 
 .navlink-underline{
     position: absolute;
     bottom: 0;
     left: 0;
-    background-color: #6BD8DB;
     background-color: #FFD369;
     height: 3px;
     width: 0;
@@ -37,7 +44,7 @@ transform: translateZ(0);
     transition: all 500ms ease-in-out;
     opacity: 0;
 
-    -webkit-transform: translateZ(0);
+-webkit-transform: translateZ(0);
 -moz-transform: translateZ(0);
 -ms-transform: translateZ(0);
 -o-transform: translateZ(0);

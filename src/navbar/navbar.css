@@ -5,8 +5,10 @@
     position: fixed;
     top: 0;
     left: 0;
-
+    transform: translateZ(0);
+    transition: all 200ms linear;
 }
+
 
 .portfolio-navbar-logo-div{
     display: flex;
@@ -18,7 +20,33 @@
     height: 18rem;
     border-radius: 100%;
     filter: drop-shadow(0 0 10px black);
-    transform: rotate(-10deg) translateY(-10px);
+    transform: rotate(-10deg) translateY(-10px) translateZ(0);
+    animation : animateLogo 4s linear infinite;
+}
+
+
+@keyframes animateLogo {
+    
+    0%{
+        transform: rotate(-10deg) translateY(-10px) translateZ(0);
+
+    }
+
+    10%{
+        transform: rotate(-40deg) translateY(-10px) translateZ(0);
+
+    }
+
+    25%{
+        transform: rotate(350deg) translateY(-10px) translateZ(0);
+
+    }
+
+    100%{
+        transform: rotate(350deg) translateY(-10px) translateZ(0);
+
+    }
+
 }
 
 
@@ -49,13 +77,14 @@
 
 
 .portfolio-navbar-navlinks-div{
-    padding: 0 20px;
+    padding: 10px 20px;
     display: flex;
     height: 50%;
     width: 80%;
     max-width: 700px;
     align-items: flex-start;
     justify-content: space-evenly;
+    margin-right: 5%;
 }
 
 .navbar-burger-button-div{
@@ -70,20 +99,7 @@
     display: none;
 }
 
-@media(max-width : 800px){
-
-    .portfolio-navbar{
-        height: 250px;
-    }
-
-    .portfolio-navbar-inner-div{
-        clip-path: url(#myMobileCurve);
-    }
-
-    .navbar-logo{
-        width: 14rem;
-        height: 12rem;
-    }
+@media(max-width : 1000px){
 
     .portfolio-navbar-navlinks-div{
         display: none;
@@ -234,6 +250,29 @@ transform:translateY(-16px) translateZ(0);
     }
 
 
+
+}
+
+@media(max-width : 800px){
+
+    .portfolio-navbar{
+        height: 250px;
+    }
+
+    .portfolio-navbar-inner-div{
+        clip-path: url(#myMobileCurve);
+    }
+
+    .navbar-logo{
+        width: 14rem;
+        height: 12rem;
+    }
+
+    /* .portfolio-navbar-navlinks-div{
+        display: none;
+    } */
+
+    
 }
 
 @media(max-width : 500px){
