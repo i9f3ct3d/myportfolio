@@ -12,7 +12,7 @@ const InputComponent=(props)=>{
     
     const inputOnBlurHandler=(e)=>{
         if(!e.target.value){
-            e.target.style.borderColor = "#303136";
+            e.target.style.borderColor = "#07252d";
             placeholderRef.current.classList.remove("shit-placeholder")
         }
     }

@@ -17,10 +17,10 @@
     color: whitesmoke;
     font-size: 1.2rem;
     font-family: 'Roboto', sans-serif;
-    border-left: 10px solid #303136;
-    border-top: 2px solid #303136;
-    border-right: 2px solid #303136;
-    border-bottom: 2px solid #303136;
+    border-left: 10px solid #07252d;
+    border-top: 2px solid #07252d;
+    border-right: 2px solid #07252d;
+    border-bottom: 2px solid #07252d;
 }
 
 .inputcomponent-placeholder{
@@ -37,9 +37,9 @@
 }
 
 .shit-placeholder{
-    top: -3px !important;
+    top: 0 !important;
     left: 30px !important;
-    background: linear-gradient(to bottom, #1D1D1F 50%, rgb(22,22,23) 50%) !important;
+    background: linear-gradient(to bottom, #05191F 50%, #041317 50%) !important;
     padding-left: 10px !important;
     color: #FFDD07 !important;
 }

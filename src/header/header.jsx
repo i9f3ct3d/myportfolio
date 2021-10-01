@@ -58,9 +58,9 @@ const Header = () =>{
                 <img className="portfolio-header-image" src={MyPic} alt="My Pic"/>
             </div>
             <div ref={ref} className="portfolio-header-right-div">
-                <p>SUSHANTA SAREN</p>
+                <p className="glowing-text">SUSHANTA SAREN</p>
                 <p>I'm a full stack</p>
-                <p>Web Developer</p>
+                <p className="glowing-text">Web Developer</p>
                 <div className="portfolio-header-right-profession-div">
                   <p><i style={{color:"#FFDD07" , fontSize:"0.5rem" , marginRight :"5px"}} className="far fa-circle"></i>MERN STACK DEVELOPER</p>
                   <p><i style={{color:"#FFDD07" , fontSize:"0.5rem" , marginRight :"5px"}} className="far fa-circle"></i>FLUTTER DEVELOPER</p>

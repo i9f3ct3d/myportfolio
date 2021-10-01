@@ -11,6 +11,7 @@
 -ms-transform: translateZ(0);
 -o-transform: translateZ(0);
 transform: translateZ(0);
+/* z-index: 100; */
 }
 
 .projectcard-backgroundimage-div{
@@ -87,7 +88,7 @@ transform: translateZ(0);
     left: 50%;
     top: 0;
     transform: translateX(-50%);
-    z-index: 10;
+    z-index: 999999999 !important;
     background: #FFDD07;
     padding: 1rem 1rem;
     filter: drop-shadow(0 0 20px black);
@@ -96,10 +97,12 @@ transform: translateZ(0);
 .projectcard-github-link{
     cursor: pointer;
     text-decoration: none;
+    z-index: 999999999 !important;
     font-size: 1.3rem;
     font-weight: 600;
     color: #222831;
     letter-spacing: 2px;
+    position: relative;
 }
 
 @media(max-width : 600px){
