@@ -203,6 +203,7 @@ const Navbar = () =>{
                           hamburgerButton.classList.toggle("open");
                           const mobileNavbar = window.document.querySelector(".mobile-navbar-right-div");
                           mobileNavbar.style.top = "-500%";
+                          window.document.querySelector(".portfolio-navbar").style.opacity = "0.8";
                           document.querySelector(`#portfolio-about-me`).scrollIntoView({behavior: 'smooth'});
                         }} 
                         className="mobile-navbar-navlink"><i className="far fa-user"></i>{" ABOUT ME"}</p>
@@ -212,6 +213,7 @@ const Navbar = () =>{
                           hamburgerButton.classList.toggle("open");
                           const mobileNavbar = window.document.querySelector(".mobile-navbar-right-div");
                           mobileNavbar.style.top = "-500%";
+                          window.document.querySelector(".portfolio-navbar").style.opacity = "0.8";
                           document.querySelector(`#portfolio-my-journey`).scrollIntoView({behavior: 'smooth'});
                         }}
                         className="mobile-navbar-navlink"><i className="fas fa-train"></i>{" MY JOURNEY"}</p>
@@ -221,6 +223,7 @@ const Navbar = () =>{
                           hamburgerButton.classList.toggle("open");
                           const mobileNavbar = window.document.querySelector(".mobile-navbar-right-div");
                           mobileNavbar.style.top = "-500%";
+                          window.document.querySelector(".portfolio-navbar").style.opacity = "0.8";
                           document.querySelector(`#portfolio-my-projects`).scrollIntoView({behavior: 'smooth'});
                         }}
                         className="mobile-navbar-navlink"><i className="far fa-copy"></i>{" PROJECTS"}</p>
@@ -230,6 +233,7 @@ const Navbar = () =>{
                           hamburgerButton.classList.toggle("open");
                           const mobileNavbar = window.document.querySelector(".mobile-navbar-right-div");
                           mobileNavbar.style.top = "-500%";
+                          window.document.querySelector(".portfolio-navbar").style.opacity = "0.8";
                           document.querySelector(`#portfolio-contact-me`).scrollIntoView({behavior: 'smooth'});
                         }}
                         className="mobile-navbar-navlink"><i className="far fa-id-card"></i>{" CONTACT ME"}</p>

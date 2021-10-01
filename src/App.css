@@ -24,7 +24,7 @@
   left: 0;
   top: 0;
   z-index: -100;
-  background-color: #303136;
+  background: linear-gradient(141deg, rgb(11, 34, 41) 40%, rgba(7,37,45,1) 40%, rgb(11, 34, 41) 70%);
 }
 
 ::-webkit-scrollbar{
@@ -33,7 +33,7 @@
 }
 
 ::-webkit-scrollbar-thumb{
-  background: linear-gradient(transparent ,green, #FFDD07);
+  background: linear-gradient(transparent ,greenYellow);
   border-radius: 6px;
 }
 

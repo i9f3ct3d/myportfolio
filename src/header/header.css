@@ -3,7 +3,7 @@
     width: 100%;
     height: calc(34rem);
     filter: drop-shadow(0px 10px 10px black);
-    border-top: 300px solid #393E46;
+    border-top: 300px solid #05191F;
 }
 
 .portfolio-header-inner-div{
@@ -12,6 +12,7 @@
     background-color: rgb(20, 20, 20);
     background-color: #17141A;
     background-color: #393E46;
+    background:linear-gradient(to bottom,#05191F , #07252D);
     display: flex;
     align-items: center;
     padding: 1rem 0;
@@ -32,7 +33,7 @@
 
 .portfolio-header-right-profession-div{
     display: inline-block;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 .portfolio-header-right-profession-div p:nth-child(1){
     font-size: 1.1rem !important;
@@ -52,7 +53,8 @@
     display: flex;
     align-items: center;
     color: white;
-    margin-bottom: 50px;
+    margin-top: 0;
+    /* margin-bottom: 30px; */
 }
 
 .portfolio-header-image{
@@ -74,20 +76,51 @@
 .portfolio-header-right-div p:nth-child(1){
     padding: 0;
     font-size: 1.5rem;
+    font-family: 'Comfortaa';
 }
 
 .portfolio-header-right-div p:nth-child(2){
     margin: 0;
     padding: 0;
     font-size: 3rem;
-    color: white;
+    color: #6BD8DB;;
 }
 
-.portfolio-header-right-div p:nth-child(3){
+.glowing-text{
     margin: 0;
-    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
     padding: 0;
     font-size: 3rem;
+    text-transform: uppercase;
+    -webkit-box-reflect: below 1px linear-gradient(transparent , #0008);
+    line-height: 0.70em;
+    font-family: 'Comfortaa';
+    /* text-shadow: none; */
+    text-shadow: 0 0 10px #03bcf4;
+    outline: none;
+    animation: glowText 5s linear infinite;
+    transform: translateZ(0);
+}
+
+@keyframes glowText {
+    0%,18%,20%,50.1%,60%,65.1%,80%,90.1%,92%{
+
+        color: #0e3742;
+        text-shadow: none;
+
+    }
+
+    18.1%,20.1%,30%,50%,60.1%,65%,80.1%,90%,92.1%,100%{
+
+        color: #fff;
+        text-shadow: 0 0 10px #03bcf4,
+        0 0 20px #03bcf4,
+        0 0 40px #03bcf4,
+        0 0 80px #03bcf4,
+        0 0 160px #03bcf4;
+
+    }
 }
 
 
@@ -158,6 +191,10 @@ transform: translateZ(0);
 }
 
 @media(max-width:1000px){
+    .glowing-text{
+        font-size: 2rem;
+    }
+
     .portfolio-header-image-div{
         height: 25rem;
         width: 25rem;
@@ -177,7 +214,7 @@ transform: translateZ(0);
     }
 
     .portfolio-header-full-div{
-        border-top: 100px solid #393E46;
+        border-top: 100px solid #05191F;
     }
 
     .portfolio-header-inner-div{
