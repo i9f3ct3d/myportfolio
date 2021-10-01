@@ -43,6 +43,26 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/c67f006040.js" crossorigin="anonymous" async></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="jquery.ripples-min.js" ></script>
+    <!-- <script ></script> -->
+    <script>
+      jQuery(document).ready(function(){
+
+        $(".portfolio-navbar-inner-div").ripples({
+          dropRadius: 20,
+          perturbance: 0.03,
+        });
+        $(".portfolio-navbar-outer-div").ripples({
+          dropRadius: 20,
+          perturbance: 0.03,
+        });
+        $(".portfolio-header-inner-div").ripples({
+          dropRadius: 20,
+          perturbance: 0.03,
+        });
+      })
+</script>
   </body>
 
 </html>

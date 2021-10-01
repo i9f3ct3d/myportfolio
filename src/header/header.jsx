@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import './header.css'
 import MyPic from '../images/myPic.svg'
 
@@ -30,6 +30,26 @@ const Header = () =>{
         )
       }
 
+      const ref = useRef();
+  
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if(entry.isIntersecting){
+                  ref.current.style.opacity = "1"
+                  ref.current.style.transform = "translateY(0) translateZ(0)"
+                  setTimeout(() => {
+                    ref.current.style.transition = "none"
+                  }, 500);
+                  observer.disconnect();
+        }
+      }
+      )
+    
+      useEffect(() => {
+        observer.observe(ref.current)
+        return () => { observer.disconnect() }
+      }, [])
+      
 
     return(
       <div  className="portfolio-header-full-div">
@@ -37,7 +57,7 @@ const Header = () =>{
             <div className="portfolio-header-image-div">
                 <img className="portfolio-header-image" src={MyPic} alt="My Pic"/>
             </div>
-            <div className="portfolio-header-right-div">
+            <div ref={ref} className="portfolio-header-right-div">
                 <p>SUSHANTA SAREN</p>
                 <p>I'm a full stack</p>
                 <p>Web Developer</p>
